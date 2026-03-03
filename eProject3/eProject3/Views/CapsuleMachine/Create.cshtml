@@ -1,0 +1,75 @@
+﻿@model eProject3.Models.CapsuleMachine
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+
+}
+
+<h1>Add</h1>
+
+<h4>CapsuleMachine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="OutputPerHour" class="control-label"></label>
+                <input asp-for="OutputPerHour" class="form-control" />
+                <span asp-validation-for="OutputPerHour" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="CapsuleSizeMM" class="control-label"></label>
+                <input asp-for="CapsuleSizeMM" class="form-control" />
+                <span asp-validation-for="CapsuleSizeMM" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="MachineDimension" class="control-label"></label>
+                <input asp-for="MachineDimension" class="form-control" />
+                <span asp-validation-for="MachineDimension" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="ShippingWeightKG" class="control-label"></label>
+                <input asp-for="ShippingWeightKG" class="form-control" />
+                <span asp-validation-for="ShippingWeightKG" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary mb-3" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
