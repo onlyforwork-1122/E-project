@@ -12,5 +12,6 @@ namespace eProject3.Models
        
          public DbSet<CapsuleMachine> tbl_CapsuleMachines { get; set; }
          public DbSet<TabletMachine> tbl_TabletMachine{ get; set; }
+         public DbSet<LiquidFillingMachine> tbl_LiquidFillingMachine { get; set; }
     }
 }

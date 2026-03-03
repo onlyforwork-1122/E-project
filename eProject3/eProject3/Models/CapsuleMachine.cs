@@ -14,7 +14,7 @@ namespace eProject3.Models
 
         // Output (e.g., 2000 capsules/hour)
         [Required]
-        [Display(Name = "Output (Capsules per Hour)")]
+        [Display(Name = "Output (per/hr)")]
         public int OutputPerHour { get; set; }
 
         // Capsule Size in mm

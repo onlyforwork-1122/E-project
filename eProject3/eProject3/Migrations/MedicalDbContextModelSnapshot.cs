@@ -58,6 +58,42 @@ namespace eProject3.Migrations
                     b.ToTable("tbl_CapsuleMachines");
                 });
 
+            modelBuilder.Entity("eProject3.Models.LiquidFillingMachine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("AirPressure")
+                        .HasColumnType("float");
+
+                    b.Property<double>("AirVolume")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("FillingRangeML")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FillingSpeedPerMinute")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ModelName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tbl_LiquidFillingMachine");
+                });
+
             modelBuilder.Entity("eProject3.Models.TabletMachine", b =>
                 {
                     b.Property<int>("Id")
