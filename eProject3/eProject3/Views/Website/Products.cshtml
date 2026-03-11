@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AllProducts
+@{
     ViewData["Title"] = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -15,7 +16,7 @@
     <section class="section">
         <div class="product-tabs">
             <button class="product-tab active" onclick="setProductTab('capsule')">💊 Capsule / Encapsulation</button>
-            <button class="product-tab" onclick="setProductTab('tablet')">🔬 Tablet Press</button>
+            <button class="product-tab" onclick="setProductTab('tablet')">🔬 Tablet </button>
             <button class="product-tab" onclick="setProductTab('liquid')">🧪 Liquid Filling</button>
 
         </div>
@@ -30,50 +31,28 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Model</th>
-                            <th>Output (C/hr)</th>
-                            <th>Cap Size (mm)</th>
-                            <th>Machine Dim (mm)</th>
-                            <th>Ship Weight (kg)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().Name)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().OutputPerHour)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().CapsuleSizeMM)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().MachineDimension)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().ShippingWeightKG)</th>
+                            <th> @Html.DisplayNameFor(model => model.Capsules.First().Description)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Profill 100</td>
-                            <td>2,000</td>
-                            <td>Size 0–5 (6.8–14.3)</td>
-                            <td>450 × 350 × 600</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>Profill 3007</td>
-                            <td>9,000</td>
-                            <td>Size 00–5 (6.8–15.1)</td>
-                            <td>620 × 480 × 900</td>
-                            <td>95</td>
-                        </tr>
-                        <tr>
-                            <td>Model 8S</td>
-                            <td>18,000</td>
-                            <td>Size 000–5 (6.8–16.4)</td>
-                            <td>800 × 650 × 1200</td>
-                            <td>210</td>
-                        </tr>
-                        <tr>
-                            <td>AutoFill 500</td>
-                            <td>50,000</td>
-                            <td>Size 0–4 (6.8–14.0)</td>
-                            <td>1100 × 850 × 1600</td>
-                            <td>480</td>
-                        </tr>
-                        <tr>
-                            <td>TurboFill Pro</td>
-                            <td>150,000</td>
-                            <td>Size 0–3 (8.0–14.0)</td>
-                            <td>1400 × 1100 × 1900</td>
-                            <td>950</td>
-                        </tr>
+                        @foreach (var item in Model.Capsules)
+                        {
+                            <tr>
+                                <td> @Html.DisplayFor(modelItem => item.Name)</td>
+                                <td> @Html.DisplayFor(modelItem => item.OutputPerHour)</td>
+                                <td> @Html.DisplayFor(modelItem => item.CapsuleSizeMM)</td>
+                                <td> @Html.DisplayFor(modelItem => item.MachineDimension)</td>
+                                <td> @Html.DisplayFor(modelItem => item.ShippingWeightKG)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            </tr>
+                        }
                     </tbody>
+             
                 </table>
             </div>
             <div class="grid-3">
@@ -114,68 +93,34 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Model</th>
-                            <th>Die Sets</th>
-                            <th>Max Pressure (kN)</th>
-                            <th>Max Dia (mm)</th>
-                            <th>Max Fill Depth (mm)</th>
-                            <th>Capacity (tabs/hr)</th>
-                            <th>Machine Size (mm)</th>
-                            <th>Net Weight (kg)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().ModelNumber)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().Dies)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().MaxPressure)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().MaxDiameterMM)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().MaxDepthFillMM)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().ProductionCapacity)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().MachineSize)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().NetWeightKG)</th>
+                            <th> @Html.DisplayNameFor(model => model.Tablets.First().Description)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>TDP 1.5</td>
-                            <td>1 set</td>
-                            <td>15</td>
-                            <td>12</td>
-                            <td>12</td>
-                            <td>4,200</td>
-                            <td>480×380×670</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <td>TDP 5</td>
-                            <td>1 set</td>
-                            <td>50</td>
-                            <td>20</td>
-                            <td>15</td>
-                            <td>5,600</td>
-                            <td>560×430×760</td>
-                            <td>75</td>
-                        </tr>
-                        <tr>
-                            <td>VSP 300</td>
-                            <td>2 sets</td>
-                            <td>80</td>
-                            <td>25</td>
-                            <td>18</td>
-                            <td>18,000</td>
-                            <td>800×650×1100</td>
-                            <td>320</td>
-                        </tr>
-                        <tr>
-                            <td>CP 501</td>
-                            <td>3 sets</td>
-                            <td>120</td>
-                            <td>38</td>
-                            <td>20</td>
-                            <td>72,000</td>
-                            <td>1100×900×1400</td>
-                            <td>780</td>
-                        </tr>
-                        <tr>
-                            <td>CP 900R</td>
-                            <td>4 sets</td>
-                            <td>150</td>
-                            <td>45</td>
-                            <td>22</td>
-                            <td>180,000</td>
-                            <td>1300×1050×1650</td>
-                            <td>1200</td>
-                        </tr>
+                        @foreach (var item in Model.Tablets)
+                        {
+                            <tr>
+                                <td> @Html.DisplayFor(modelItem => item.ModelNumber)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Dies)</td>
+                                <td> @Html.DisplayFor(modelItem => item.MaxPressure)</td>
+                                <td> @Html.DisplayFor(modelItem => item.MaxDiameterMM)</td>
+                                <td> @Html.DisplayFor(modelItem => item.MaxDepthFillMM)</td>
+                                <td> @Html.DisplayFor(modelItem => item.ProductionCapacity)</td>
+                                <td> @Html.DisplayFor(modelItem => item.MachineSize)</td>
+                                <td> @Html.DisplayFor(modelItem => item.NetWeightKG)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            </tr>
+                        }
                     </tbody>
+
                 </table>
             </div>
             <div class="grid-3">
@@ -207,43 +152,29 @@
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Model</th>
-                            <th>Air Pressure (bar)</th>
-                            <th>Air Volume (L/min)</th>
-                            <th>Fill Speed (btl/min)</th>
-                            <th>Fill Range (ml)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().ModelName)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().AirPressure)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().AirVolume)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().FillingSpeedPerMinute)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().FillingRangeML)</th>
+                            <th> @Html.DisplayNameFor(model => model.Liquids.First().Description)</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>DHF 50</td>
-                            <td>4–6</td>
-                            <td>40</td>
-                            <td>20–50</td>
-                            <td>5–200</td>
-                        </tr>
-                        <tr>
-                            <td>DHF 100</td>
-                            <td>4–6</td>
-                            <td>65</td>
-                            <td>50–100</td>
-                            <td>10–500</td>
-                        </tr>
-                        <tr>
-                            <td>DHF 200S</td>
-                            <td>5–7</td>
-                            <td>90</td>
-                            <td>80–200</td>
-                            <td>20–1000</td>
-                        </tr>
-                        <tr>
-                            <td>DHF 500X</td>
-                            <td>5–8</td>
-                            <td>130</td>
-                            <td>150–500</td>
-                            <td>50–5000</td>
-                        </tr>
+                        @foreach (var item in Model.Liquids)
+                        {
+                            <tr>
+                                <td> @Html.DisplayFor(modelItem => item.ModelName)</td>
+                                <td> @Html.DisplayFor(modelItem => item.AirPressure)</td>
+                                <td> @Html.DisplayFor(modelItem => item.AirVolume)</td>
+                                <td> @Html.DisplayFor(modelItem => item.FillingSpeedPerMinute)</td>
+                                <td> @Html.DisplayFor(modelItem => item.FillingRangeML)</td>
+                                <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            </tr>
+                        }
                     </tbody>
+
                 </table>
             </div>
             <div class="grid-2">

@@ -1,5 +1,6 @@
 ﻿using eProject3.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace eProject3.Controllers
 {
@@ -44,7 +45,14 @@ namespace eProject3.Controllers
 
         public IActionResult Products()
         {
-            return View();
+            var products = new AllProducts
+            {
+                Capsules = medicalDb.tbl_CapsuleMachines.ToList(),
+                Tablets = medicalDb.tbl_TabletMachine.ToList(),
+                Liquids = medicalDb.tbl_LiquidFillingMachine.ToList()
+            };
+
+            return View(products);
         }
 
         public IActionResult QuoteUs()
