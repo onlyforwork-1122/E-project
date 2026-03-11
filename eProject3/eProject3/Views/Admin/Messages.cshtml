@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Messages";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+
+<!-- ═══ MAIN ═══ -->
+    <div class="page-content">
+
+        <div class="page-header">
+            <div>
+                <div class="breadcrumb-custom"><i class="bi bi-house-fill"></i><i class="bi bi-chevron-right"></i><a href="index.html" style="color:inherit;text-decoration:none;">Dashboard</a><i class="bi bi-chevron-right"></i><span>Contact Messages</span></div>
+                <div class="page-hd-title">Contact Messages</div>
+                <div class="page-hd-sub">Messages submitted via the Contact Us page.</div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;">
+                <span id="unread-label" style="font-size:13px;color:var(--text-muted);"></span>
+                <button class="btn-primary-custom" style="background:var(--success);" onclick="markAllRead()"><i class="bi bi-check2-all"></i> Mark All Read</button>
+            </div>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="cat-tabs">
+            <button class="cat-tab active" onclick="filterMessages('all',this)">All <span id="cnt-all" style="opacity:.6;"></span></button>
+            <button class="cat-tab" onclick="filterMessages('unread',this)">Unread <span id="cnt-unread" style="opacity:.6;"></span></button>
+            <button class="cat-tab" onclick="filterMessages('read',this)">Read <span id="cnt-read" style="opacity:.6;"></span></button>
+        </div>
+
+        <!-- INBOX SPLIT PANE -->
+        <div class="inbox-wrap">
+            <div class="inbox-list" id="inbox-list"></div>
+            <div class="inbox-detail" id="inbox-detail">
+                <div class="detail-placeholder">
+                    <i class="bi bi-envelope-open"></i>
+                    <p style="font-size:14px;font-weight:500;">Select a message to read</p>
+                    <p style="font-size:12.5px;margin-top:4px;">Click any message on the left to view its full content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ═══ MODAL: EMAIL REPLY ═══ -->
+<div class="modal-overlay" id="modal-email">
+    <div class="modal-box">
+        <div class="modal-head">
+            <div class="modal-title"><i class="bi bi-reply-fill" style="color:var(--primary);margin-right:8px;"></i>Reply to Message</div>
+            <button class="modal-close" onclick="closeModal('modal-email')"><i class="bi bi-x"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3"><label class="form-label-custom">To</label><input type="email" class="form-control-custom" id="email-to"></div>
+            <div class="mb-3"><label class="form-label-custom">Subject</label><input type="text" class="form-control-custom" id="email-subject"></div>
+            <div class="mb-3"><label class="form-label-custom">Message</label><textarea class="form-control-custom" id="email-body" rows="7" style="resize:vertical;"></textarea></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeModal('modal-email')">Cancel</button>
+            <button class="btn-primary-custom" onclick="sendEmail()"><i class="bi bi-send-fill"></i> Send Reply</button>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ MODAL: CONFIRM DELETE ═══ -->
+<div class="modal-overlay" id="modal-confirm">
+    <div class="modal-box" style="max-width:400px;">
+        <div class="modal-head">
+            <div class="modal-title" style="color:var(--danger);"><i class="bi bi-exclamation-triangle-fill me-2"></i>Confirm Delete</div>
+            <button class="modal-close" onclick="closeModal('modal-confirm')"><i class="bi bi-x"></i></button>
+        </div>
+        <div class="modal-body"><p style="font-size:14px;color:var(--text-muted);" id="confirm-text"></p></div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeModal('modal-confirm')">Cancel</button>
+            <button class="btn-primary-custom" style="background:var(--danger);" id="confirm-ok-btn"><i class="bi bi-trash-fill"></i> Delete</button>
+        </div>
+    </div>
+</div>
+
+

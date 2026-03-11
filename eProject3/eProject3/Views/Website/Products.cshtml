@@ -1,0 +1,333 @@
+﻿@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page active" id="page-products">
+    <div class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-content">
+            <div class="section-tag">Catalogue</div>
+            <h1>Our Products</h1>
+            <p>Precision pharmaceutical manufacturing equipment for every scale</p>
+        </div>
+    </div>
+    <section class="section">
+        <div class="product-tabs">
+            <button class="product-tab active" onclick="setProductTab('capsule')">💊 Capsule / Encapsulation</button>
+            <button class="product-tab" onclick="setProductTab('tablet')">🔬 Tablet Press</button>
+            <button class="product-tab" onclick="setProductTab('liquid')">🧪 Liquid Filling</button>
+
+        </div>
+
+        <!-- CAPSULE -->
+        <div class="product-cat-section active" id="prod-capsule">
+            <div class="section-header">
+                <h2 class="section-title">Capsule Filling Systems</h2>
+                <p class="section-sub">High-precision capsule filling machines for hard gelatin capsules — from laboratory research scale to high-volume production.</p>
+            </div>
+            <div class="card" style="margin-bottom:2rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Output (C/hr)</th>
+                            <th>Cap Size (mm)</th>
+                            <th>Machine Dim (mm)</th>
+                            <th>Ship Weight (kg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Profill 100</td>
+                            <td>2,000</td>
+                            <td>Size 0–5 (6.8–14.3)</td>
+                            <td>450 × 350 × 600</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>Profill 3007</td>
+                            <td>9,000</td>
+                            <td>Size 00–5 (6.8–15.1)</td>
+                            <td>620 × 480 × 900</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Model 8S</td>
+                            <td>18,000</td>
+                            <td>Size 000–5 (6.8–16.4)</td>
+                            <td>800 × 650 × 1200</td>
+                            <td>210</td>
+                        </tr>
+                        <tr>
+                            <td>AutoFill 500</td>
+                            <td>50,000</td>
+                            <td>Size 0–4 (6.8–14.0)</td>
+                            <td>1100 × 850 × 1600</td>
+                            <td>480</td>
+                        </tr>
+                        <tr>
+                            <td>TurboFill Pro</td>
+                            <td>150,000</td>
+                            <td>Size 0–3 (8.0–14.0)</td>
+                            <td>1400 × 1100 × 1900</td>
+                            <td>950</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-sub">Semi-Automatic</div>
+                    <div class="card-title">Profill 100</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">Ideal for R&D and small-batch production. Manual loading with automatic tamping. Stainless steel contact parts.</p>
+                    <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--text-muted);border-top:1px solid var(--border);margin-top:1rem;padding-top:1rem;">
+                        <span>2,000 caps/hr</span><span>Size 0–5</span><span>38 kg</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-sub">Automatic</div>
+                    <div class="card-title">Profill 3007</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">Mid-range production machine. Touch-screen HMI, programmable dosing, automatic capsule feeding and rectification.</p>
+                    <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--text-muted);border-top:1px solid var(--border);margin-top:1rem;padding-top:1rem;">
+                        <span>9,000 caps/hr</span><span>Size 00–5</span><span>95 kg</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-sub">High-Speed</div>
+                    <div class="card-title">Model 8S</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">High throughput production line. Variable speed drive, in-line weight control, GMP documentation package included.</p>
+                    <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--text-muted);border-top:1px solid var(--border);margin-top:1rem;padding-top:1rem;">
+                        <span>18,000 caps/hr</span><span>Size 000–5</span><span>210 kg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLET -->
+        <div class="product-cat-section" id="prod-tablet">
+            <div class="section-header">
+                <h2 class="section-title">Tablet Press Machines</h2>
+                <p class="section-sub">Single-punch and rotary tablet presses for laboratory development through full-scale production.</p>
+            </div>
+            <div class="card" style="margin-bottom:2rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Die Sets</th>
+                            <th>Max Pressure (kN)</th>
+                            <th>Max Dia (mm)</th>
+                            <th>Max Fill Depth (mm)</th>
+                            <th>Capacity (tabs/hr)</th>
+                            <th>Machine Size (mm)</th>
+                            <th>Net Weight (kg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TDP 1.5</td>
+                            <td>1 set</td>
+                            <td>15</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>4,200</td>
+                            <td>480×380×670</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td>TDP 5</td>
+                            <td>1 set</td>
+                            <td>50</td>
+                            <td>20</td>
+                            <td>15</td>
+                            <td>5,600</td>
+                            <td>560×430×760</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>VSP 300</td>
+                            <td>2 sets</td>
+                            <td>80</td>
+                            <td>25</td>
+                            <td>18</td>
+                            <td>18,000</td>
+                            <td>800×650×1100</td>
+                            <td>320</td>
+                        </tr>
+                        <tr>
+                            <td>CP 501</td>
+                            <td>3 sets</td>
+                            <td>120</td>
+                            <td>38</td>
+                            <td>20</td>
+                            <td>72,000</td>
+                            <td>1100×900×1400</td>
+                            <td>780</td>
+                        </tr>
+                        <tr>
+                            <td>CP 900R</td>
+                            <td>4 sets</td>
+                            <td>150</td>
+                            <td>45</td>
+                            <td>22</td>
+                            <td>180,000</td>
+                            <td>1300×1050×1650</td>
+                            <td>1200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-sub">Lab Scale</div>
+                    <div class="card-title">TDP Series</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">Single-punch tablet press, ideal for R&D formulation development. Compact, easy to clean, accepts standard D-type tooling.</p>
+                </div>
+                <div class="card">
+                    <div class="card-sub">Pilot Scale</div>
+                    <div class="card-title">VSP 300</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">Double-station rotary press. PLC controlled, force monitoring, real-time data logging, batch record generation.</p>
+                </div>
+                <div class="card">
+                    <div class="card-sub">Production Scale</div>
+                    <div class="card-title">CP 501 / CP 900R</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">High-volume rotary press with multi-station die sets. Integrated rejection system, online hardness monitoring, 21 CFR Part 11.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIQUID -->
+        <div class="product-cat-section" id="prod-liquid">
+            <div class="section-header">
+                <h2 class="section-title">Liquid Filling Systems</h2>
+                <p class="section-sub">Precision volumetric liquid filling equipment for syrups, solutions, suspensions, and viscous pharmaceuticals.</p>
+            </div>
+            <div class="card" style="margin-bottom:2rem;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Air Pressure (bar)</th>
+                            <th>Air Volume (L/min)</th>
+                            <th>Fill Speed (btl/min)</th>
+                            <th>Fill Range (ml)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DHF 50</td>
+                            <td>4–6</td>
+                            <td>40</td>
+                            <td>20–50</td>
+                            <td>5–200</td>
+                        </tr>
+                        <tr>
+                            <td>DHF 100</td>
+                            <td>4–6</td>
+                            <td>65</td>
+                            <td>50–100</td>
+                            <td>10–500</td>
+                        </tr>
+                        <tr>
+                            <td>DHF 200S</td>
+                            <td>5–7</td>
+                            <td>90</td>
+                            <td>80–200</td>
+                            <td>20–1000</td>
+                        </tr>
+                        <tr>
+                            <td>DHF 500X</td>
+                            <td>5–8</td>
+                            <td>130</td>
+                            <td>150–500</td>
+                            <td>50–5000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-sub">Double Headed Filter</div>
+                    <div class="card-title">DHF Series</div>
+                    <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin:0.75rem 0;">The DHF (Double Headed Filter) series features dual-nozzle filling with integrated 0.2μm filtration. Suitable for sterile and non-sterile liquid products. Full AISI 316L stainless steel product contact surfaces.</p>
+                    <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:0.5rem;">
+                        <div style="display:flex;gap:0.5rem;font-size:0.82rem;"><span style="color:var(--teal);min-width:140px;">Air Pressure Range:</span><span style="color:var(--text-muted);">4–8 bar</span></div>
+                        <div style="display:flex;gap:0.5rem;font-size:0.82rem;"><span style="color:var(--teal);min-width:140px;">Fill Accuracy:</span><span style="color:var(--text-muted);">±0.5% CV</span></div>
+                        <div style="display:flex;gap:0.5rem;font-size:0.82rem;"><span style="color:var(--teal);min-width:140px;">Validation Support:</span><span style="color:var(--text-muted);">IQ/OQ/PQ documentation</span></div>
+                        <div style="display:flex;gap:0.5rem;font-size:0.82rem;"><span style="color:var(--teal);min-width:140px;">Container Types:</span><span style="color:var(--text-muted);">Glass, PET, HDPE bottles</span></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-sub">Key Features</div>
+                    <div class="card-title">Why DHF Series?</div>
+                    <div style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.75rem;">
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:0.875rem;">
+                            <span style="color:var(--teal);">✓</span><span style="color:var(--text-muted);">Servo-controlled fill heads for consistent dosing accuracy</span>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:0.875rem;">
+                            <span style="color:var(--teal);">✓</span><span style="color:var(--text-muted);">Quick changeover — bottle format change in under 15 minutes</span>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:0.875rem;">
+                            <span style="color:var(--teal);">✓</span><span style="color:var(--text-muted);">CIP/SIP compatible with full documentation</span>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:0.875rem;">
+                            <span style="color:var(--teal);">✓</span><span style="color:var(--text-muted);">Touch HMI with 21 CFR Part 11 audit trail</span>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;font-size:0.875rem;">
+                            <span style="color:var(--teal);">✓</span><span style="color:var(--text-muted);">Compatible with viscosity range 1–50,000 cP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLENDING -->
+        <div class="product-cat-section" id="prod-blending">
+            <div class="section-header">
+                <h2 class="section-title">Blending Equipment</h2>
+                <p class="section-sub">V-blenders, double cone blenders, and ribbon blenders for pharmaceutical powder mixing.</p>
+            </div>
+            <div class="card">
+                <table class="data-table">
+                    <thead><tr><th>Model</th><th>Type</th><th>Capacity (L)</th><th>Speed (RPM)</th><th>Motor (kW)</th><th>Weight (kg)</th></tr></thead>
+                    <tbody>
+                        <tr><td>VBL-10</td><td>V-Blender</td><td>10</td><td>0–25</td><td>0.37</td><td>45</td></tr>
+                        <tr><td>VBL-50</td><td>V-Blender</td><td>50</td><td>0–20</td><td>1.1</td><td>180</td></tr>
+                        <tr><td>DCB-200</td><td>Double Cone</td><td>200</td><td>0–15</td><td>3.0</td><td>450</td></tr>
+                        <tr><td>RBL-500</td><td>Ribbon Blender</td><td>500</td><td>Fixed 30</td><td>5.5</td><td>980</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PROCESS -->
+        <div class="product-cat-section" id="prod-process">
+            <div class="section-header">
+                <h2 class="section-title">Process Equipment</h2>
+                <p class="section-sub">Fluid bed dryers, granulators, coaters, and related pharmaceutical process equipment.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-sub">Drying</div><div class="card-title">Fluid Bed Dryer FBD-60</div><p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.7;">60L capacity. Inlet temp 40–120°C. Explosion-proof design. cGMP bowl with wash-in-place.</p></div>
+                <div class="card"><div class="card-sub">Granulation</div><div class="card-title">High Shear Granulator HSG-150</div><p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.7;">150L bowl, main impeller 5.5kW, chopper 0.75kW. Automatic binder addition, torque monitoring.</p></div>
+                <div class="card"><div class="card-sub">Coating</div><div class="card-title">Pan Coater PC-300</div><p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.7;">300L pan. Film, sugar, and enteric coating capability. Variable pan speed, automated spray system.</p></div>
+            </div>
+        </div>
+
+        <!-- USED -->
+        <div class="product-cat-section" id="prod-used">
+            <div class="section-header">
+                <h2 class="section-title">Used Equipment</h2>
+                <p class="section-sub">Fully refurbished, inspected and certified used pharmaceutical equipment at significant cost savings.</p>
+            </div>
+            <div class="alert alert-info">ℹ Inventory changes frequently. Contact us for current availability and pricing on used equipment.</div>
+            <div class="grid-2">
+                <div class="card"><div class="card-sub">Used — Good Condition</div><div class="card-title">Profill 3007 (Refurbished)</div><p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.7;">2018 model. Fully overhauled. New seals, bearings, and tooling. Tested to original specs. 6-month warranty.</p><button class="btn btn-outline btn-sm" style="margin-top:1rem;" onclick="showPage('quote')">Request Pricing</button></div>
+                <div class="card"><div class="card-sub">Used — Excellent Condition</div><div class="card-title">TDP 5 Tablet Press</div><p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.7;">2020 model, low hours. Original tooling set included. Cosmetic wear only. 12-month warranty.</p><button class="btn btn-outline btn-sm" style="margin-top:1rem;" onclick="showPage('quote')">Request Pricing</button></div>
+            </div>
+        </div>
+
+    </section>
+
+
+</div>

@@ -1,0 +1,151 @@
+﻿@model IEnumerable<eProject3.Models.QuoteUs>
+@{
+    ViewData["Title"] = "QuoteUs";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+<!-- ═══ MAIN ═══ -->
+
+<div class="page-content">
+
+    <div class="page-header">
+        <div>
+            <div class="breadcrumb-custom"><i class="bi bi-house-fill"></i><i class="bi bi-chevron-right"></i><a href="index.html" style="color:inherit;text-decoration:none;">Dashboard</a><i class="bi bi-chevron-right"></i><span>Quotes / Feedback</span></div>
+            <div class="page-hd-title">Quotes &amp; Feedback</div>
+            <div class="page-hd-sub">All customer quotes and feedback submissions.</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+            <span id="quotes-count" style="font-size:13px;color:var(--text-muted);"></span>
+            <button class="btn-primary-custom" style="background:var(--success);" onclick="exportQuotes()"><i class="bi bi-download"></i> Export CSV</button>
+        </div>
+    </div>
+
+    <!-- VIEW TOGGLE -->
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-bottom:16px;">
+        <button class="btn-sm-icon btn-view" id="toggle-card" onclick="setView('card')" title="Card view" style="width:34px;height:34px;"><i class="bi bi-grid-fill"></i></button>
+        <button class="btn-sm-icon" id="toggle-table" onclick="setView('table')" title="Table view" style="width:34px;height:34px;background:var(--body-bg);color:var(--text-muted);border:none;border-radius:6px;"><i class="bi bi-list-ul"></i></button>
+    </div>
+
+    <!-- CARDS VIEW -->
+    <div id="quotes-cards">
+        @foreach (var item in Model)
+        {
+            <div class="feedback-card">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <div style="width:46px;height:46px;border-radius:50%;background:var(--primary-pale);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:15px;font-weight:700;flex-shrink:0;">@(string.Join("", item.Name.Split(' ').Select(x => x[0])))</div>
+                        <div>
+                            <div style="font-size:15px;font-weight:700;">@Html.DisplayFor(modelItem => item.Name)</div>
+                            <div style="font-size:12.5px;color:var(--text-muted);margin-top:2px;"><i class="bi bi-building me-1"></i>@Html.DisplayFor(modelItem => item.CompanyName) &nbsp;·&nbsp; <i class="bi bi-geo-alt me-1"></i>@Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.Country)</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:6px;">
+                        <button class="btn-sm-icon btn-view" onclick="viewFeedback(${q.id})" title="View Details"><i class="bi bi-eye-fill"></i></button>
+                        <button class="btn-sm-icon btn-delete" onclick="deleteFeedback(${q.id})" title="Delete"><i class="bi bi-trash-fill"></i></button>
+                    </div>
+                </div>
+                <div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0f4f9;">
+                    <div class="quote-icon"><i class="bi bi-quote"></i></div>
+                    <p style="font-size:13.5px;color:var(--text-main);line-height:1.65;margin-top:4px;">@Html.DisplayFor(modelItem => item.Comments)</p>
+                </div>
+                <div style="margin-top:12px;display:flex;gap:20px;flex-wrap:wrap;padding-top:10px;border-top:1px solid #f0f4f9;">
+                    <span style="font-size:12px;color:var(--text-muted);"><i class="bi bi-envelope me-1"></i>@Html.DisplayFor(modelItem => item.Email)</span>
+                    <span style="font-size:12px;color:var(--text-muted);"><i class="bi bi-telephone me-1"></i>@Html.DisplayFor(modelItem => item.Phone)</span>
+                    <span style="font-size:12px;color:var(--text-muted);"><i class="bi bi-pin-map me-1"></i>@Html.DisplayFor(modelItem => item.Address), @Html.DisplayFor(modelItem => item.PostalCode), @Html.DisplayFor(modelItem => item.State)</span>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <!-- TABLE VIEW (hidden by default) -->
+    <div id="quotes-table-wrap" style="display:block;">
+        <div class="panel">
+            <div class="panel-body p-0">
+                <div class="table-wrap">
+                    @* <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Phone)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CompanyName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Address)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.City)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.State)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PostalCode)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Country)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Comments)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Phone)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CompanyName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Address)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.City)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.State)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PostalCode)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Country)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Comments)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table> *@
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</main>

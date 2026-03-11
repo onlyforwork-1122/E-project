@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Website\\Career.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\Website\\Career.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\controllers\\liquidfillingmachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\liquidfillingmachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\LiquidFillingMachine\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\LiquidFillingMachine\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eProject3\\Views\\LiquidFillingMachine\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\controllers\\capsulemachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\capsulemachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\models\\medicaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\medicaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\models\\liquidfillingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\liquidfillingmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,131 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260303123618_tbl_LiquidFillingMachine.cs",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs",
-              "RelativeDocumentMoniker": "eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs",
-              "RelativeToolTip": "eProject3\\Migrations\\20260303123618_tbl_LiquidFillingMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T12:36:19.292Z",
+              "Title": "Career.cshtml",
+              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Website\\Career.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Website\\Career.cshtml",
+              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Website\\Career.cshtml*",
+              "RelativeToolTip": "eProject3\\Views\\Website\\Career.cshtml*",
+              "ViewState": "AgIAAM0BAAAAAAAAAAAUwOcBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T11:36:53.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml",
-              "RelativeDocumentMoniker": "eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml",
-              "RelativeToolTip": "eProject3\\Views\\LiquidFillingMachine\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-03T12:07:22.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Details.cshtml",
-              "RelativeDocumentMoniker": "eProject3\\Views\\LiquidFillingMachine\\Details.cshtml",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Details.cshtml",
-              "RelativeToolTip": "eProject3\\Views\\LiquidFillingMachine\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-03T12:06:39.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml",
-              "RelativeDocumentMoniker": "eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml",
-              "RelativeToolTip": "eProject3\\Views\\LiquidFillingMachine\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-03T12:05:53.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Create.cshtml",
-              "RelativeDocumentMoniker": "eProject3\\Views\\LiquidFillingMachine\\Create.cshtml",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Create.cshtml",
-              "RelativeToolTip": "eProject3\\Views\\LiquidFillingMachine\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-03T12:04:59.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Index.cshtml",
-              "RelativeDocumentMoniker": "eProject3\\Views\\LiquidFillingMachine\\Index.cshtml",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\LiquidFillingMachine\\Index.cshtml",
-              "RelativeToolTip": "eProject3\\Views\\LiquidFillingMachine\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-03T12:01:34.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LiquidFillingMachineController.cs",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\LiquidFillingMachineController.cs",
-              "RelativeDocumentMoniker": "eProject3\\Controllers\\LiquidFillingMachineController.cs",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\LiquidFillingMachineController.cs",
-              "RelativeToolTip": "eProject3\\Controllers\\LiquidFillingMachineController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswD4AAAAvAAAAAAAAAA==",
+              "Title": "WebsiteController.cs",
+              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\WebsiteController.cs",
+              "RelativeDocumentMoniker": "eProject3\\Controllers\\WebsiteController.cs",
+              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\WebsiteController.cs",
+              "RelativeToolTip": "eProject3\\Controllers\\WebsiteController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv0UAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T11:41:08.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CapsuleMachineController.cs",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\CapsuleMachineController.cs",
-              "RelativeDocumentMoniker": "eProject3\\Controllers\\CapsuleMachineController.cs",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\CapsuleMachineController.cs",
-              "RelativeToolTip": "eProject3\\Controllers\\CapsuleMachineController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAwwFwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T11:44:42.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MedicalDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Models\\MedicalDbContext.cs",
-              "RelativeDocumentMoniker": "eProject3\\Models\\MedicalDbContext.cs",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Models\\MedicalDbContext.cs",
-              "RelativeToolTip": "eProject3\\Models\\MedicalDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T11:46:47.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LiquidFillingMachine.cs",
-              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Models\\LiquidFillingMachine.cs",
-              "RelativeDocumentMoniker": "eProject3\\Models\\LiquidFillingMachine.cs",
-              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Models\\LiquidFillingMachine.cs",
-              "RelativeToolTip": "eProject3\\Models\\LiquidFillingMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T10:55:40.901Z",
+              "WhenOpened": "2026-03-11T11:34:07.636Z",
               "EditorCaption": ""
             }
           ]

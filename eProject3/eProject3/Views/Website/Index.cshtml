@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page active" id="page-home">
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Pharmaceutical Equipment Specialists</div>
+            <h1>
+                <strong>Precision Pharma</strong>
+                <em>Equipment</em> for a<br />Better World
+            </h1>
+            <p class="hero-desc">
+                XYZ Pharmaceuticals delivers world-class manufacturing equipment — from capsule encapsulation systems and tablet press machines to liquid filling solutions. Trusted by industry leaders across 40+ countries.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" onclick="showPage('products')">
+                    ⚗ Explore Products
+                </button>
+                <button class="btn btn-outline" onclick="showPage('quote')">
+                    Request a Quote
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-value">40+</div>
+                <div class="stat-label">Countries Served</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">500+</div>
+                <div class="stat-label">Machines Deployed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">30yr</div>
+                <div class="stat-label">Industry Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-tag">What We Do</div>
+            <h2 class="section-title">End-to-End Pharmaceutical<br />Manufacturing Solutions</h2>
+            <p class="section-sub">From R&D-scale benchtop machines to high-throughput production lines — we have the right equipment for every stage of your process.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div style="font-size:2rem;margin-bottom:1rem;">💊</div>
+                <div class="card-sub">Capsule / Encapsulation</div>
+                <div class="card-title">Capsule Filling Systems</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-top:0.5rem;">From 2,000 to 150,000+ capsules/hr. Fully automatic, semi-automatic and manual filling machines with precision dosing.</p>
+                <button class="btn btn-outline btn-sm" style="margin-top:1.25rem;" onclick="showPage('products',{tab:'capsule'})">View Products →</button>
+            </div>
+            <div class="card">
+                <div style="font-size:2rem;margin-bottom:1rem;">🔬</div>
+                <div class="card-sub">Tablet</div>
+                <div class="card-title">Tablet Press Machines</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-top:0.5rem;">Single-punch and rotary press machines for laboratory and production scale. High pressure, precision die sets, compact design.</p>
+                <button class="btn btn-outline btn-sm" style="margin-top:1.25rem;" onclick="showPage('products',{tab:'tablet'})">View Products →</button>
+            </div>
+            <div class="card">
+                <div style="font-size:2rem;margin-bottom:1rem;">🧪</div>
+                <div class="card-sub">Liquid Filling</div>
+                <div class="card-title">Liquid Filling Lines</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-top:0.5rem;">Double-headed filtered filling systems for syrups, suspensions, and solutions. Variable fill volumes from 5ml to 5000ml.</p>
+                <button class="btn btn-outline btn-sm" style="margin-top:1.25rem;" onclick="showPage('products',{tab:'liquid'})">View Products →</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Why XYZ -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-tag">Why XYZ</div>
+            <h2 class="section-title">Built for Pharmaceutical Excellence</h2>
+        </div>
+        <div class="grid-4">
+            <div class="card" style="text-align:center;">
+                <div style="font-size:1.5rem;color:var(--teal);margin-bottom:0.75rem;">✓</div>
+                <div style="font-weight:600;color:var(--text-head);margin-bottom:0.5rem;">GMP Compliant</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">All equipment meets global GMP manufacturing standards and FDA guidelines.</div>
+            </div>
+            <div class="card" style="text-align:center;">
+                <div style="font-size:1.5rem;color:var(--gold);margin-bottom:0.75rem;">⚡</div>
+                <div style="font-weight:600;color:var(--text-head);margin-bottom:0.5rem;">Fast Delivery</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Stock items ship within 48 hours. Custom machines in 6–10 weeks.</div>
+            </div>
+            <div class="card" style="text-align:center;">
+                <div style="font-size:1.5rem;color:var(--teal);margin-bottom:0.75rem;">🛡</div>
+                <div style="font-weight:600;color:var(--text-head);margin-bottom:0.5rem;">2-Year Warranty</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Comprehensive warranty coverage with global service network and spare parts.</div>
+            </div>
+            <div class="card" style="text-align:center;">
+                <div style="font-size:1.5rem;color:var(--gold);margin-bottom:0.75rem;">📞</div>
+                <div style="font-weight:600;color:var(--text-head);margin-bottom:0.5rem;">24/7 Support</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Dedicated technical support team available around the clock.</div>
+            </div>
+        </div>
+    </section>
+
+
+</div>

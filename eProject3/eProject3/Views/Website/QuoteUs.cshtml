@@ -1,0 +1,165 @@
+﻿@model eProject3.Models.QuoteUs
+
+@{
+    ViewData["Title"] = "QuoteUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+
+
+<div class="page active" id="page-quote">
+    <div class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-content">
+            <div class="section-tag">Request</div>
+            <h1>Get a Quote</h1>
+            <p>Tell us your requirements and we'll respond with a detailed proposal.</p>
+        </div>
+    </div>
+    <section class="section">
+        <div class="grid-2" style="gap:4rem;align-items:start;">
+
+
+            <form asp-controler="Website" asp-action="QuoteUs" method="post">
+
+                <div class="alert alert-info" style="margin-bottom:2rem;">
+                    💡 Fill in your details and we'll prepare a customised quotation within 2 business days.
+                </div>
+
+                    @if (ViewBag.Success != null)
+                    {
+                        <div class="alert alert-success">@ViewBag.Success</div>
+                    }
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Name" >Full Name *</label>
+                         <input asp-for="Name" type="text" id="q-name" placeholder="Full Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                            <label asp-for="CompanyName">Company Name *</label>
+                            <input asp-for="CompanyName" type="text" id="q-company" placeholder="Your Company" />
+                            <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                        <label asp-for="Address" >Address</label>
+                        <input asp-for="Address" type="text" id="q-address" placeholder="Your Address" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                            <label asp-for="City" >City</label>
+                            <input asp-for="City"  id="q-city" placeholder="City" />
+                    </div>
+
+                    <div class="form-group">
+                            <label asp-for="State">State / Province</label>
+                            <input asp-for="State"  id="q-state" placeholder="State" />
+                            <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-row-3">
+                    <div class="form-group">
+                            <label asp-for="PostalCode">Postal Code</label>
+                            <input asp-for="PostalCode"  id="q-postal" placeholder="Your City's Postal Code" />
+                            <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group" style="grid-column:span 2;">
+                        <label>Country</label>
+                            <select id="q-country" asp-items="Html.GetEnumSelectList<country>()">
+                            <option value="">Select Country...</option>
+                            @* <option>Pakistan</option>
+                            <option>United States</option>
+                            <option>United Kingdom</option>
+                            <option>United Arab Emirates</option>
+                            <option>Germany</option>
+                            <option>France</option><option>Singapore</option>
+                            <option>Australia</option><option>Canada</option>
+                            <option>Other</option> *@
+                        </select>
+
+                        </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Email">Email Address *</label>
+                        <input asp-for="Email" type="email" id="q-email" placeholder="you@company.com" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Phone">Phone *</label>
+                        <input asp-for="Phone" type="tel" id="q-phone" placeholder="+1 555 000 0000" />
+                    </div>
+                </div>
+
+
+                @* <div class="form-group">
+                    <label>Product Interest</label>
+                    <select id="q-product">
+                        <option value="">Select a product category...</option>
+                        <option>Capsule / Encapsulation Equipment</option>
+                        <option>Tablet Press Machines</option>
+                        <option>Liquid Filling Systems</option>
+                        <option>Complete Production Line</option>
+                    </select>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="Comments">Comments / Requirements</label>
+                    <textarea asp-for="Comments" id="q-comments" rows="5" placeholder="Please describe your production requirements...">
+
+                    </textarea>
+                </div>
+
+                    <button class="btn btn-primary" style="width:100%;" type="submit">
+                    Submit Quote Request →
+                    </button>
+                
+            </form>
+
+            <div>
+                <div class="card" style="margin-bottom:1.5rem;">
+                    <div class="card-sub">Why Quote With Us?</div>
+                    <div class="card-title" style="margin-bottom:1rem;">What to Expect</div>
+                    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:32px;height:32px;background:rgba(0,194,168,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;font-size:0.85rem;flex-shrink:0;">1</div>
+                            <div><div style="font-weight:600;color:var(--text-head);font-size:0.9rem;margin-bottom:3px;">Submit Your Request</div><div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Fill in your company details and equipment requirements.</div></div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:32px;height:32px;background:rgba(0,194,168,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;font-size:0.85rem;flex-shrink:0;">2</div>
+                            <div><div style="font-weight:600;color:var(--text-head);font-size:0.9rem;margin-bottom:3px;">Technical Consultation</div><div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Our engineers review your needs and may schedule a call.</div></div>
+                        </div>
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:32px;height:32px;background:rgba(0,194,168,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;font-size:0.85rem;flex-shrink:0;">3</div>
+                            <div><div style="font-weight:600;color:var(--text-head);font-size:0.9rem;margin-bottom:3px;">Detailed Quotation</div><div style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">Receive a comprehensive quote with specs, pricing, and delivery.</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-sub">Response Time</div>
+                    <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--teal);font-weight:600;">48 hrs</div>
+                    <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;line-height:1.6;">Guaranteed response time for all quote requests during business hours (Mon–Sat, 9am–6pm IST).</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
