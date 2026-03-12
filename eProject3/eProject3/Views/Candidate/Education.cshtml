@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewData["Title"] = "Education";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-page-title">Education &amp; Experience</div>
+        </div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            </button>
+            <button class="logout-btn" onclick="showToast('Logged out')">Log out</button>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <!-- Education Section -->
+        <div class="card fade-in mb-24">
+            <div class="card-header" style="padding-bottom:16px;">
+                <div>
+                    <div class="card-title">Academic Qualifications</div>
+                    <div class="card-subtitle">Your educational background</div>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="openModal('edu-modal')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                    Add Qualification
+                </button>
+            </div>
+            <hr class="card-divider" />
+
+            <div class="card-body" style="padding-top:8px;">
+                <div id="edu-list">
+
+                    <div class="list-item">
+                        <div class="list-icon edu">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="list-title">Bachelor of Pharmacy (B.Pharm)</div>
+                            <div class="list-sub">University of Karachi</div>
+                            <div class="list-meta">2016 – 2020 &nbsp;·&nbsp; First Division &nbsp;·&nbsp; CGPA 3.6/4.0</div>
+                        </div>
+                        <div class="list-action">
+                            <span class="badge badge-success">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="list-icon edu">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="list-title">Intermediate — Pre-Medical (HSSC)</div>
+                            <div class="list-sub">Government Degree College, Karachi</div>
+                            <div class="list-meta">2014 – 2016 &nbsp;·&nbsp; A Grade &nbsp;·&nbsp; 87%</div>
+                        </div>
+                        <div class="list-action">
+                            <span class="badge badge-success">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="list-item" style="border-bottom:none;">
+                        <div class="list-icon edu">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="list-title">Matriculation (SSC)</div>
+                            <div class="list-sub">Foundation Public School, Karachi</div>
+                            <div class="list-meta">2012 – 2014 &nbsp;·&nbsp; A1 Grade &nbsp;·&nbsp; 92%</div>
+                        </div>
+                        <div class="list-action">
+                            <span class="badge badge-success">Completed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="card fade-in fade-in-1">
+            <div class="card-header" style="padding-bottom:16px;">
+                <div>
+                    <div class="card-title">Professional Experience</div>
+                    <div class="card-subtitle">Your work history</div>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="openModal('exp-modal')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                    Add Experience
+                </button>
+            </div>
+            <hr class="card-divider" />
+
+            <div class="card-body" style="padding-top:8px;">
+                <div id="exp-list">
+
+                    <div class="list-item">
+                        <div class="list-icon work">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="list-title">Quality Control Analyst</div>
+                            <div class="list-sub">MedPlus Pharmaceuticals Ltd. &nbsp;·&nbsp; Karachi</div>
+                            <div class="list-meta">January 2021 – Present &nbsp;·&nbsp; Full-time &nbsp;·&nbsp; 3+ years</div>
+                        </div>
+                        <div class="list-action">
+                            <span class="badge badge-info">Current</span>
+                        </div>
+                    </div>
+
+                    <div class="list-item" style="border-bottom:none;">
+                        <div class="list-icon work">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>
+                        </div>
+                        <div style="flex:1;">
+                            <div class="list-title">Lab Intern</div>
+                            <div class="list-sub">PharmaCare Industries &nbsp;·&nbsp; Karachi</div>
+                            <div class="list-meta">June 2020 – December 2020 &nbsp;·&nbsp; Internship &nbsp;·&nbsp; 6 months</div>
+                        </div>
+                        <div class="list-action">
+                            <span class="badge badge-success">Completed</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="margin-top:16px;padding:14px 16px;background:var(--bg-input);border-radius:var(--radius-md);border:1px solid var(--border-light);">
+                    <div style="font-size:12px;color:var(--text-muted);margin-bottom:2px;">Total work experience</div>
+                    <div style="font-size:15px;font-weight:600;color:var(--text-primary);">3 years 6 months</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- Add Education Modal -->
+<div class="modal-overlay" id="edu-modal">
+    <div class="modal">
+        <div class="modal-head">
+            <div class="modal-title">Add Qualification</div>
+            <button class="modal-close" onclick="closeModal('edu-modal')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+            </button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="field"><label>Degree / Qualification</label><input id="e-degree" type="text" placeholder="e.g. Bachelor of Pharmacy" /></div>
+            <div class="field"><label>Institution</label><input id="e-inst" type="text" placeholder="University or college name" /></div>
+            <div class="form-grid">
+                <div class="field"><label>Start year</label><input id="e-start" type="number" placeholder="2018" min="1990" max="2030" /></div>
+                <div class="field"><label>End year</label><input id="e-end" type="number" placeholder="2022" min="1990" max="2030" /></div>
+            </div>
+            <div class="field"><label>Grade / CGPA / Division</label><input id="e-grade" type="text" placeholder="e.g. First Division, 3.7/4.0" /></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline" onclick="closeModal('edu-modal')">Cancel</button>
+            <button class="btn btn-primary" onclick="addEdu()">Add Qualification</button>
+        </div>
+    </div>
+</div>
+
+<!-- Add Experience Modal -->
+<div class="modal-overlay" id="exp-modal">
+    <div class="modal">
+        <div class="modal-head">
+            <div class="modal-title">Add Work Experience</div>
+            <button class="modal-close" onclick="closeModal('exp-modal')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+            </button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="field"><label>Job title</label><input id="x-title" type="text" placeholder="e.g. Lab Technician" /></div>
+            <div class="field"><label>Company / Organization</label><input id="x-company" type="text" placeholder="Company name" /></div>
+            <div class="form-grid">
+                <div class="field"><label>Start date</label><input id="x-start" type="month" /></div>
+                <div class="field"><label>End date (leave blank if current)</label><input id="x-end" type="month" /></div>
+            </div>
+            <div class="field">
+                <label>Employment type</label>
+                <select id="x-type">
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Internship</option>
+                    <option>Contract</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline" onclick="closeModal('exp-modal')">Cancel</button>
+            <button class="btn btn-primary" onclick="addExp()">Add Experience</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast success">
+    <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
+    <span id="toast-msg"></span>
+</div>

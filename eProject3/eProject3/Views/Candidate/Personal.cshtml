@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewData["Title"] = "Personal";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-page-title">Personal Details</div>
+        </div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="setEditMode(true)" id="edit-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                Edit Profile
+            </button>
+            <button class="logout-btn" onclick="showToast('Logged out')">Log out</button>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <!-- Profile hero card -->
+        <div class="card card-pad fade-in mb-24 flex-between" style="flex-wrap:wrap; gap:20px;">
+            <div class="flex gap-16" style="align-items:center;">
+                <div class="user-av-lg">AK</div>
+                <div>
+                    <div style="font-family:var(--font-display);font-size:24px;color:var(--text-primary);">Ayesha Khan</div>
+                    <div style="font-size:13.5px;color:var(--text-muted);margin-top:4px;">QC Analyst Applicant &nbsp;·&nbsp; Karachi, Sindh, Pakistan</div>
+                    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;">
+                        <span class="badge badge-info">B.Pharm Graduate</span>
+                        <span class="badge badge-success">3 Years Experience</span>
+                        <span class="badge badge-warning">Application Pending</span>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+                <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Member since</div>
+                <div style="font-size:14px;font-weight:600;color:var(--text-primary);">March 2025</div>
+            </div>
+        </div>
+
+        <!-- ── VIEW MODE ── -->
+        <div id="view-mode">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="fade-in fade-in-1">
+
+                <!-- Basic Info card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Basic Information</div>
+                        </div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" width="18" height="18"><circle cx="12" cy="8" r="4" /><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" /></svg>
+                    </div>
+                    <hr class="card-divider" />
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">First Name</div>
+                            <div class="info-value">Ayesha</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Last Name</div>
+                            <div class="info-value">Khan</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Date of Birth</div>
+                            <div class="info-value">April 15, 1998</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Gender</div>
+                            <div class="info-value">Female</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div><div class="card-title">Contact Details</div></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8" /><path d="M1 1l22 22" /></svg>
+                    </div>
+                    <hr class="card-divider" />
+                    <div class="info-grid">
+                        <div class="info-item" style="grid-column:1/-1; border-right:none;">
+                            <div class="info-label">Email Address</div>
+                            <a href="mailto:ayesha.khan@email.com" class="info-value link">ayesha.khan@email.com</a>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Phone Number</div>
+                            <div class="info-value">+92 300 1234567</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Country</div>
+                            <div class="info-value">Pakistan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address card -->
+                <div class="card" style="grid-column:1/-1;">
+                    <div class="card-header">
+                        <div><div class="card-title">Address</div></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.8" width="18" height="18"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                    </div>
+                    <hr class="card-divider" />
+                    <div class="info-grid">
+                        <div class="info-item" style="grid-column:1/-1;border-right:none;">
+                            <div class="info-label">Street Address</div>
+                            <div class="info-value">Block 5, Gulshan-e-Iqbal</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">City</div>
+                            <div class="info-value">Karachi</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">State / Province</div>
+                            <div class="info-value">Sindh</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Postal Code</div>
+                            <div class="info-value">74200</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Country</div>
+                            <div class="info-value">Pakistan</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── EDIT MODE ── -->
+        <div id="edit-mode" style="display:none;">
+            <div class="card card-pad fade-in">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+                    <div style="font-size:16px;font-weight:600;color:var(--text-primary);">Edit Personal Information</div>
+                    <button class="btn btn-ghost btn-sm" onclick="setEditMode(false)">Cancel</button>
+                </div>
+
+                <div class="form-section">Basic Info</div>
+                <div class="form-grid">
+                    <div class="field"><label>First name</label><input type="text" value="Ayesha" /></div>
+                    <div class="field"><label>Last name</label><input type="text" value="Khan" /></div>
+                    <div class="field"><label>Date of birth</label><input type="date" value="1998-04-15" /></div>
+                    <div class="field">
+                        <label>Gender</label>
+                        <select><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select>
+                    </div>
+                </div>
+
+                <div class="form-section">Contact</div>
+                <div class="form-grid">
+                    <div class="field"><label>Email address</label><input type="email" value="ayesha.khan@email.com" /></div>
+                    <div class="field"><label>Phone number</label><input type="tel" value="+92 300 1234567" /></div>
+                </div>
+
+                <div class="form-section">Address</div>
+                <div class="form-grid g1">
+                    <div class="field"><label>Street address</label><input type="text" value="Block 5, Gulshan-e-Iqbal" /></div>
+                </div>
+                <div class="form-grid" style="margin-top:18px;">
+                    <div class="field"><label>City</label><input type="text" value="Karachi" /></div>
+                    <div class="field"><label>State / Province</label><input type="text" value="Sindh" /></div>
+                    <div class="field"><label>Postal code</label><input type="text" value="74200" /></div>
+                    <div class="field"><label>Country</label><input type="text" value="Pakistan" /></div>
+                </div>
+
+                <div class="flex gap-10 mt-24">
+                    <button class="btn btn-primary" onclick="savePersonal()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="15" height="15" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                        Save Changes
+                    </button>
+                    <button class="btn btn-outline" onclick="setEditMode(false)">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div id="toast" class="toast success">
+    <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
+    <span id="toast-msg"></span>
+</div>
+

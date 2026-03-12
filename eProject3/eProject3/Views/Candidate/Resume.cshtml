@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewData["Title"] = "Resume";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-page-title">Resume</div>
+        </div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            </button>
+            <button class="logout-btn" onclick="showToast('Logged out')">Log out</button>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <!-- Alert banner (shown when no resume) -->
+        <div class="card card-pad fade-in mb-24" id="alert-banner" style="background:var(--danger-bg);border-color:var(--danger-bdr);display:flex;align-items:center;gap:14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--danger-text)" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+            <div style="flex:1;">
+                <div style="font-size:13.5px;font-weight:600;color:var(--danger-text);">Resume not uploaded</div>
+                <div style="font-size:12.5px;color:var(--text-secondary);margin-top:2px;">Upload your resume to complete your application. Candidates without a resume are rarely shortlisted by HR.</div>
+            </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;" class="fade-in fade-in-1">
+
+            <!-- Upload card -->
+            <div>
+                <div class="card card-pad mb-20">
+                    <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:4px;">Upload Resume</div>
+                    <div style="font-size:12.5px;color:var(--text-muted);margin-bottom:20px;">PDF or DOCX format, maximum 5 MB</div>
+
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="var(--brand-500)" stroke-width="1.8" stroke-linecap="round" /><polyline points="17 8 12 3 7 8" stroke="var(--brand-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /><line x1="12" y1="3" x2="12" y2="15" stroke="var(--brand-500)" stroke-width="1.8" stroke-linecap="round" /></svg>
+                        </div>
+                        <div class="upload-title">Drag &amp; drop your resume here</div>
+                        <div class="upload-or">— or —</div>
+                        <button class="btn btn-outline btn-sm" onclick="event.stopPropagation();document.getElementById('file-inp').click()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg>
+                            Browse File
+                        </button>
+                        <div class="upload-hint" style="margin-top:10px;">Supported: .pdf, .doc, .docx</div>
+                    </div>
+                    <input type="file" id="file-inp" accept=".pdf,.doc,.docx" onchange="handleUpload(this)" />
+                    <div id="new-file"></div>
+                </div>
+
+                <!-- Current file -->
+                <div class="card card-pad" id="current-section">
+                    <div style="font-size:13px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;">Currently Uploaded</div>
+                    <div id="current-file-wrap">
+                        <div style="padding:20px;text-align:center;background:var(--bg-input);border-radius:var(--radius-md);border:1px dashed var(--border-mid);">
+                            <div style="font-size:13px;color:var(--text-muted);">No resume uploaded yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips card -->
+            <div>
+                <div class="card card-pad fade-in fade-in-2 mb-20">
+                    <div style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:16px;">Resume Tips</div>
+                    <div style="display:flex;flex-direction:column;gap:14px;">
+                        <div class="flex gap-12" style="align-items:flex-start;">
+                            <div style="width:28px;height:28px;border-radius:50%;background:var(--info-bg);border:1px solid var(--info-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="font-size:12px;font-weight:700;color:var(--info-text);">1</span>
+                            </div>
+                            <div>
+                                <div style="font-size:13px;font-weight:600;color:var(--text-primary);">Use PDF format</div>
+                                <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">PDF preserves formatting across all devices and is preferred by HR teams.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-12" style="align-items:flex-start;">
+                            <div style="width:28px;height:28px;border-radius:50%;background:var(--info-bg);border:1px solid var(--info-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="font-size:12px;font-weight:700;color:var(--info-text);">2</span>
+                            </div>
+                            <div>
+                                <div style="font-size:13px;font-weight:600;color:var(--text-primary);">Keep it to 1–2 pages</div>
+                                <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Concise resumes are read more carefully. Focus on relevant pharma experience.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-12" style="align-items:flex-start;">
+                            <div style="width:28px;height:28px;border-radius:50%;background:var(--info-bg);border:1px solid var(--info-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="font-size:12px;font-weight:700;color:var(--info-text);">3</span>
+                            </div>
+                            <div>
+                                <div style="font-size:13px;font-weight:600;color:var(--text-primary);">Highlight certifications</div>
+                                <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Include GMP, QA/QC, or any pharma-specific certifications prominently.</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-12" style="align-items:flex-start;">
+                            <div style="width:28px;height:28px;border-radius:50%;background:var(--info-bg);border:1px solid var(--info-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="font-size:12px;font-weight:700;color:var(--info-text);">4</span>
+                            </div>
+                            <div>
+                                <div style="font-size:13px;font-weight:600;color:var(--text-primary);">Update regularly</div>
+                                <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Keep your resume current. You can replace it anytime from this page.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-pad fade-in fade-in-3" style="background:linear-gradient(135deg,var(--brand-800),var(--brand-600));border:none;">
+                    <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;">Need help with your resume?</div>
+                    <div style="font-size:12.5px;color:rgba(255,255,255,0.7);margin-bottom:16px;">Contact our HR team for guidance on what we look for in pharmaceutical candidates.</div>
+                    <a href="mailto:careers@xyzpharma.com" class="btn btn-sm" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.2);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                        Email HR Team
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div id="toast" class="toast success">
+    <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
+    <span id="toast-msg"></span>
+</div>
+

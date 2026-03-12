@@ -1058,11 +1058,6 @@ C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\
 C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\wd026s27gj-{0}-j0ty9p9s78-j0ty9p9s78.gz
 C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\w48fsurprz-{0}-2e5q1ov61i-2e5q1ov61i.gz
 C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\0zf2yebzt4-{0}-ikdk46v7ni-ikdk46v7ni.gz
-C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\fimjwps1ly-{0}-98ru74s10p-98ru74s10p.gz
-C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\7jlt8kdhcf-{0}-7rik45i0a2-7rik45i0a2.gz
-C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\zbo9hz398l-{0}-g8dpuqnnic-g8dpuqnnic.gz
-C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\tzohsy6pkm-{0}-wp6sr38qhs-wp6sr38qhs.gz
-C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\p3d5cpb1lj-{0}-ysp5847uw3-ysp5847uw3.gz
 C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\z6mkn53rh0-{0}-isv607cf73-isv607cf73.gz
 C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\bin\Debug\net10.0\appsettings.json
@@ -1344,3 +1339,7 @@ C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\obj\Debug\net1
 C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\w48fsurprz-{0}-2cc04apyio-2cc04apyio.gz
 C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\tzohsy6pkm-{0}-xznsd7ld43-xznsd7ld43.gz
 C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\p3d5cpb1lj-{0}-b3x4whz10r-b3x4whz10r.gz
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\p3d5cpb1lj-{0}-b3x4whz10r-b3x4whz10r.gz
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\tzohsy6pkm-{0}-xznsd7ld43-xznsd7ld43.gz
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\gsjyxo2syf-{0}-dyjx89twm7-dyjx89twm7.gz
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\obj\Debug\net10.0\compressed\8dd05n6zzc-{0}-1kbry3ot06-1kbry3ot06.gz

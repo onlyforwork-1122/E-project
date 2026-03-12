@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Candidate_Layout.cshtml";
+}
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-page-title">Dashboard</div>
+            <div class="topbar-breadcrumb">Welcome back, Ayesha 👋</div>
+        </div>
+        <div class="topbar-right">
+            <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+            </button>
+            <button class="logout-btn" onclick="showToast('Logged out successfully')">Log out</button>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Application status banner -->
+        <div class="card card-pad fade-in mb-24" style="background: linear-gradient(135deg, var(--brand-800) 0%, var(--brand-600) 100%); border: none; color: #fff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div>
+                <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px;">Application Status</div>
+                <div style="font-family: var(--font-display); font-size: 22px; color: #fff; margin-bottom: 6px;">Under Review</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Your application for <strong style="color:#fff;">QC Analyst</strong> was submitted 3 days ago. Our HR team will contact you shortly.</div>
+            </div>
+            <div style="text-align: right; flex-shrink: 0;">
+                <span class="badge badge-warning" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); color: #fff; font-size: 13px; padding: 7px 16px;">
+                    <span class="badge-dot" style="background:#fbbf24;"></span>
+                    Pending Review
+                </span>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 6px;">Est. response: 5–7 business days</div>
+            </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="stat-grid fade-in fade-in-1 mb-24">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6" /></svg>
+                </div>
+                <div class="stat-value">1</div>
+                <div class="stat-label">Active application</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon amber">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                </div>
+                <div class="stat-value">3</div>
+                <div class="stat-label">Days since applied</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                </div>
+                <div class="stat-value">72%</div>
+                <div class="stat-label">Profile complete</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon red">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                </div>
+                <div class="stat-value">1</div>
+                <div class="stat-label">Action needed</div>
+            </div>
+        </div>
+
+        <!-- Bottom grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="fade-in fade-in-2">
+
+            <!-- Profile Completeness -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Profile Completeness</div>
+                        <div class="card-subtitle">Complete your profile to improve shortlisting chances</div>
+                    </div>
+                    <span style="font-size: 22px; font-weight: 700; color: var(--brand-500);">72%</span>
+                </div>
+                <div class="card-body">
+                    <div class="progress-track mb-20">
+                        <div class="progress-fill" data-pct="72" style="width:0"></div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div class="flex-between">
+                            <div class="flex gap-10" style="align-items:center;">
+                                <div style="width:22px;height:22px;border-radius:50%;background:var(--success-bg);border:1.5px solid var(--success-bdr);display:flex;align-items:center;justify-content:center;">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--success-text)" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg>
+                                </div>
+                                <span style="font-size:13px; color: var(--text-primary);">Personal details</span>
+                            </div>
+                            <span class="badge badge-success">Done</span>
+                        </div>
+                        <div class="flex-between">
+                            <div class="flex gap-10" style="align-items:center;">
+                                <div style="width:22px;height:22px;border-radius:50%;background:var(--success-bg);border:1.5px solid var(--success-bdr);display:flex;align-items:center;justify-content:center;">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--success-text)" stroke-width="3"><polyline points="20 6 9 17 4 12" /></svg>
+                                </div>
+                                <span style="font-size:13px; color: var(--text-primary);">Education history</span>
+                            </div>
+                            <span class="badge badge-success">Done</span>
+                        </div>
+                        <div class="flex-between">
+                            <div class="flex gap-10" style="align-items:center;">
+                                <div style="width:22px;height:22px;border-radius:50%;background:var(--warning-bg);border:1.5px solid var(--warning-bdr);display:flex;align-items:center;justify-content:center;">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--warning-text)" stroke-width="3"><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                                </div>
+                                <span style="font-size:13px; color: var(--text-primary);">Resume uploaded</span>
+                            </div>
+                            <a href="resume.html" class="badge badge-warning" style="text-decoration:none; cursor:pointer;">Upload now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Quick Overview</div>
+                        <div class="card-subtitle">Your profile at a glance</div>
+                    </div>
+                    <a href="personal.html" class="btn btn-outline btn-sm">Edit</a>
+                </div>
+                <div class="card-body" style="padding-top: 16px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light);">
+                        <div class="user-av-lg">AK</div>
+                        <div>
+                            <div style="font-family: var(--font-display); font-size: 20px; color: var(--text-primary);">Ayesha Khan</div>
+                            <div style="font-size: 13px; color: var(--text-muted); margin-top: 3px;">QC Analyst Applicant &nbsp;·&nbsp; Karachi, Pakistan</div>
+                            <div style="margin-top: 8px;"><span class="badge badge-info">B.Pharm Graduate</span></div>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div class="flex gap-10" style="align-items:flex-start;">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                            <span style="font-size: 13px; color: var(--text-secondary);">ayesha.khan@email.com</span>
+                        </div>
+                        <div class="flex gap-10" style="align-items:flex-start;">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .95h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
+                            <span style="font-size: 13px; color: var(--text-secondary);">+92 300 1234567</span>
+                        </div>
+                        <div class="flex gap-10" style="align-items:flex-start;">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                            <span style="font-size: 13px; color: var(--text-secondary);">B.Pharm — University of Karachi (2020)</span>
+                        </div>
+                        <div class="flex gap-10" style="align-items:flex-start;">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>
+                            <span style="font-size: 13px; color: var(--text-secondary);">QC Analyst · MedPlus Pharma (3 yrs)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application timeline -->
+            <div class="card fade-in fade-in-3">
+                <div class="card-header"><div><div class="card-title">Application Timeline</div><div class="card-subtitle">Track your recruitment journey</div></div></div>
+                <div class="card-body">
+                    <div style="display: flex; flex-direction: column; gap: 0; position: relative;">
+                        <!-- vertical line -->
+                        <div style="position:absolute;left:15px;top:20px;bottom:20px;width:1.5px;background:var(--border-light);z-index:0;"></div>
+
+                        <div style="display:flex;gap:14px;align-items:flex-start;padding:0 0 20px; position:relative;z-index:1;">
+                            <div style="width:32px;height:32px;border-radius:50%;background:var(--success-bg);border:2px solid var(--success-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--success-text)" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:13.5px;font-weight:600;color:var(--text-primary);">Account Created</div>
+                                <div style="font-size:12px;color:var(--text-muted);">March 6, 2025 &nbsp;·&nbsp; 10:32 AM</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;gap:14px;align-items:flex-start;padding:0 0 20px; position:relative;z-index:1;">
+                            <div style="width:32px;height:32px;border-radius:50%;background:var(--success-bg);border:2px solid var(--success-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--success-text)" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:13.5px;font-weight:600;color:var(--text-primary);">Profile Submitted</div>
+                                <div style="font-size:12px;color:var(--text-muted);">March 9, 2025 &nbsp;·&nbsp; 2:15 PM</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;gap:14px;align-items:flex-start;padding:0 0 20px; position:relative;z-index:1;">
+                            <div style="width:32px;height:32px;border-radius:50%;background:var(--warning-bg);border:2px solid var(--warning-bdr);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--warning-text)" stroke-width="2.5"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:13.5px;font-weight:600;color:var(--text-primary);">Under HR Review</div>
+                                <div style="font-size:12px;color:var(--text-muted);">In progress &nbsp;·&nbsp; Est. 5–7 days</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;gap:14px;align-items:flex-start; position:relative;z-index:1; opacity:0.4;">
+                            <div style="width:32px;height:32px;border-radius:50%;background:var(--bg-hover);border:2px solid var(--border-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07" /><path d="M5.41 5.41A19.5 19.5 0 003.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .95h3a2 2 0 012 1.72" /></svg>
+                            </div>
+                            <div>
+                                <div style="font-size:13.5px;font-weight:600;color:var(--text-primary);">Interview Invitation</div>
+                                <div style="font-size:12px;color:var(--text-muted);">Pending HR decision</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips / notices -->
+            <div class="card fade-in fade-in-4">
+                <div class="card-header"><div><div class="card-title">Tips to Stand Out</div><div class="card-subtitle">Improve your application</div></div></div>
+                <div class="card-body" style="display:flex;flex-direction:column;gap:14px;">
+                    <div style="display:flex;gap:12px;padding:14px;background:var(--danger-bg);border-radius:var(--radius-md);border:1px solid var(--danger-bdr);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--danger-text)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                        <div>
+                            <div style="font-size:13px;font-weight:600;color:var(--danger-text);">Resume missing</div>
+                            <div style="font-size:12px;color:var(--text-secondary);margin-top:2px;">Upload your resume to complete your application. Candidates without a resume are rarely shortlisted.</div>
+                            <a href="resume.html" class="btn btn-sm btn-danger" style="margin-top:10px; display:inline-flex;">Upload Resume</a>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:12px;padding:14px;background:var(--info-bg);border-radius:var(--radius-md);border:1px solid var(--info-bdr);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--info-text)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                        <div>
+                            <div style="font-size:13px;font-weight:600;color:var(--info-text);">Keep details updated</div>
+                            <div style="font-size:12px;color:var(--text-secondary);margin-top:2px;">Ensure your phone number and email are current so HR can reach you quickly for interviews.</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:12px;padding:14px;background:var(--success-bg);border-radius:var(--radius-md);border:1px solid var(--success-bdr);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--success-text)" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><polyline points="20 6 9 17 4 12" /></svg>
+                        <div>
+                            <div style="font-size:13px;font-weight:600;color:var(--success-text);">Profile looks strong</div>
+                            <div style="font-size:12px;color:var(--text-secondary);margin-top:2px;">Your education and work experience are well-filled. You're in the top pool of applicants for this role.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /bottom grid -->
+    </div><!-- /content -->
+</main>
+
+<div id="toast" class="toast success">
+    <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
+    <span id="toast-msg"></span>
+</div>
+

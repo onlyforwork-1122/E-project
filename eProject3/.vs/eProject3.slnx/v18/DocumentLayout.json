@@ -1,12 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\amanu\\onedrive\\desktop\\e-project\\eproject3\\eproject3\\views\\shared\\candidate_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\shared\\candidate_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Candidate_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "ToolTip": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T20:06:27.329Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

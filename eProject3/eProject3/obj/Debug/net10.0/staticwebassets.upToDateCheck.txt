@@ -1,5 +1,6 @@
 wwwroot\Dashboard\assets\css\career.css
 wwwroot\Dashboard\assets\css\messages.css
+wwwroot\Dashboard\assets\css\shared.css
 wwwroot\Dashboard\assets\images\Capsules.jpg
 wwwroot\Dashboard\assets\images\liquid.jpeg
 wwwroot\Dashboard\assets\images\tablets.png
@@ -7,11 +8,14 @@ wwwroot\Dashboard\assets\js\career.js
 wwwroot\Dashboard\assets\js\shared.js
 wwwroot\Website\assets\css\Styles.css
 wwwroot\Website\assets\js\main.js
-wwwroot\Dashboard\assets\css\shared.css
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\career.css
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\messages.css
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\career.js
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\shared.js
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Website\assets\css\Styles.css
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Website\assets\js\main.js
-C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\shared.css
+wwwroot\Candidate\assets\css\StyleSheet.css
+wwwroot\Candidate\assets\js\app.js
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\career.css
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\messages.css
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\css\shared.css
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\career.js
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\shared.js
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Website\assets\css\Styles.css
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Website\assets\js\main.js
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Candidate\assets\css\StyleSheet.css
+C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\wwwroot\Candidate\assets\js\app.js
