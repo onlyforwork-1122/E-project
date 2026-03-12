@@ -81,5 +81,31 @@ namespace eProject3.Controllers
         }
 
 
+
+        //Career Register and Login
+
+        [HttpPost]
+        public async Task<IActionResult> Register(Candidate c)
+        {
+            await medicalDb.tbl_Candidates.AddAsync(c);
+            await medicalDb.SaveChangesAsync();
+            return RedirectToAction("Index", "Candidate");
+        }
+
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+            var user = medicalDb.tbl_Candidates
+                .FirstOrDefault(x => x.Email == email && x.Password == password);
+
+            if (user != null)
+            {
+                HttpContext.Session.SetInt32("CandidateId", user.Id);
+                return RedirectToAction("Index","Candidate");
+            }
+
+            ViewBag.msg = "Invalid Email or Password";
+            return View();
+        }
     }
 }

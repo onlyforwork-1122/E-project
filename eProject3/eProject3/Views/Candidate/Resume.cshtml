@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Resume";
-    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+    Layout = "~/Views/Shared/Candidate_Layout.cshtml";
 }
 
 
@@ -128,3 +128,42 @@
     <span id="toast-msg"></span>
 </div>
 
+<script>
+    setupUpload('file-inp', 'upload-zone', 'new-file', function(file) {
+      const ext = file.name.split('.').pop().toLowerCase();
+      const typeClass = ext === 'pdf' ? 'pdf' : 'doc';
+      const size = file.size < 1024*1024 ? Math.round(file.size/1024) + ' KB' : (file.size/(1024*1024)).toFixed(1) + ' MB';
+
+      // Update current file area
+      document.getElementById('current-file-wrap').innerHTML = `
+        <div class="file-chip">
+          <div class="file-type-badge ${typeClass}">
+            <span class="file-type-text">${ext.toUpperCase()}</span>
+          </div>
+          <div style="flex:1;">
+            <div class="file-name">${file.name}</div>
+            <div class="file-meta">${size} &nbsp;·&nbsp; Just uploaded</div>
+          </div>
+          <div class="file-actions">
+            <button class="btn btn-ghost btn-sm btn-icon" title="Remove" onclick="removeResume()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg>
+            </button>
+          </div>
+        </div>`;
+
+      // Hide alert banner
+      document.getElementById('alert-banner').style.display = 'none';
+      document.getElementById('nav-badge').style.display = 'none';
+      showToast('Resume uploaded: ' + file.name);
+    });
+
+    function removeResume() {
+      document.getElementById('current-file-wrap').innerHTML = `
+        <div style="padding:20px;text-align:center;background:var(--bg-input);border-radius:var(--radius-md);border:1px dashed var(--border-mid);">
+          <div style="font-size:13px;color:var(--text-muted);">No resume uploaded yet</div>
+        </div>`;
+      document.getElementById('alert-banner').style.display = 'flex';
+      document.getElementById('nav-badge').style.display = 'inline';
+      showToast('Resume removed', 'error');
+    }
+</script>

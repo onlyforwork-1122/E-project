@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Education";
-    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+    Layout = "~/Views/Shared/Candidate_Layout.cshtml";
 }
 
 <!-- ══ MAIN ══ -->
@@ -202,3 +202,60 @@
     <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
     <span id="toast-msg"></span>
 </div>
+
+
+<script>
+    function addEdu() {
+      const degree = document.getElementById('e-degree').value.trim();
+      const inst   = document.getElementById('e-inst').value.trim();
+      const start  = document.getElementById('e-start').value.trim();
+      const end    = document.getElementById('e-end').value.trim();
+      const grade  = document.getElementById('e-grade').value.trim();
+      if (!degree || !inst) { showToast('Please enter degree and institution', 'error'); return; }
+      const row = document.createElement('div');
+      row.className = 'list-item';
+      row.innerHTML = `
+        <div class="list-icon edu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div style="flex:1;">
+          <div class="list-title">${degree}</div>
+          <div class="list-sub">${inst}</div>
+          <div class="list-meta">${start && end ? start + ' – ' + end : start ? start + ' – Present' : ''} ${grade ? '&nbsp;·&nbsp; ' + grade : ''}</div>
+        </div>
+        <div class="list-action"><span class="badge ${end ? 'badge-success' : 'badge-info'}">${end ? 'Completed' : 'Ongoing'}</span></div>`;
+      document.getElementById('edu-list').appendChild(row);
+      ['e-degree','e-inst','e-start','e-end','e-grade'].forEach(id => document.getElementById(id).value = '');
+      closeModal('edu-modal');
+      showToast('Qualification added');
+    }
+
+    function addExp() {
+      const title   = document.getElementById('x-title').value.trim();
+      const company = document.getElementById('x-company').value.trim();
+      const start   = document.getElementById('x-start').value;
+      const end     = document.getElementById('x-end').value;
+      const type    = document.getElementById('x-type').value;
+      if (!title || !company) { showToast('Please enter job title and company', 'error'); return; }
+      const fmt = d => d ? new Date(d + '-01').toLocaleString('default',{month:'long', year:'numeric'}) : 'Present';
+      const row = document.createElement('div');
+      row.className = 'list-item';
+      row.style.borderBottom = 'none';
+      row.innerHTML = `
+        <div class="list-icon work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <div style="flex:1;">
+          <div class="list-title">${title}</div>
+          <div class="list-sub">${company}</div>
+          <div class="list-meta">${fmt(start)} – ${fmt(end)} &nbsp;·&nbsp; ${type}</div>
+        </div>
+        <div class="list-action"><span class="badge ${end ? 'badge-success' : 'badge-info'}">${end ? 'Past' : 'Current'}</span></div>`;
+      const list = document.getElementById('exp-list');
+      list.querySelectorAll('.list-item').forEach(i => i.style.borderBottom = '');
+      list.appendChild(row);
+      ['x-title','x-company','x-start','x-end'].forEach(id => document.getElementById(id).value = '');
+      closeModal('exp-modal');
+      showToast('Experience added');
+    }
+</script>

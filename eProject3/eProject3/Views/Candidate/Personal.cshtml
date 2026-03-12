@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Personal";
-    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+    Layout = "~/Views/Shared/Candidate_Layout.cshtml";
 }
 
 
@@ -189,3 +189,14 @@
     <span id="toast-msg"></span>
 </div>
 
+<script>
+function setEditMode(on) {
+document.getElementById('view-mode').style.display = on ? 'none' : 'block';
+document.getElementById('edit-mode').style.display = on ? 'block' : 'none';
+document.getElementById('edit-btn').style.display = on ? 'none' : 'flex';
+}
+function savePersonal() {
+setEditMode(false);
+showToast('Personal details saved successfully');
+}
+</script>
