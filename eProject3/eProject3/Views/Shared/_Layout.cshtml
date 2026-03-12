@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Website/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <div class="nav-logo" onclick="showPage('home')">
+            <div class="logo-mark">Rx</div>
+            <span>XYZ <em>Pharma</em></span>
+        </div>
+        <ul class="nav-links" id="mainNav">
+            <li><a asp-controller="Website" asp-action="Index" data-page="home">Home</a></li>
+            <li><a asp-controller="Website" asp-action="About" data-page="about">About Us</a></li>
+            <li><a asp-controller="Website" asp-action="Products" data-page="products">Products</a></li>
+            <li><a asp-controller="Website" asp-action="Contact" data-page="contact">Contact</a></li>
+            <li><a asp-controller="Website" asp-action="QuoteUs" data-page="quote">Quote</a></li>
+            <li><a asp-controller="Website" asp-action="Career" data-page="career">Careers</a></li>
+            <li><a data-page="admin" asp-controller="Admin" asp-action="Index" class="nav-cta">Admin Login</a></li>
+            <li>
+                <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" title="Toggle dark mode">
+                    <div class="theme-toggle-track"><div class="theme-toggle-thumb"></div></div>
+                    <span class="theme-toggle-label" id="themeLabel">Dark</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <div class="toast" id="toast"></div>
+    @RenderBody()
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">XYZ <span>Pharma</span></div>
+                <p class="footer-desc">Leading supplier of pharmaceutical manufacturing equipment. Serving the global pharma industry with precision-engineered solutions since 1994.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" onclick="showPage('home')">Home</a></li>
+                    <li><a href="about.html" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="products.html" onclick="showPage('products')">Products</a></li>
+                    <li><a href="contact.html" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html" onclick="showPage('products',{tab:'capsule'})">Capsule Filling</a></li>
+                    <li><a href="products.html" onclick="showPage('products',{tab:'tablet'})">Tablet Press</a></li>
+                    <li><a href="products.html" onclick="showPage('products',{tab:'liquid'})">Liquid Filling</a></li>
+                    <li><a href="products.html" onclick="showPage('products',{tab:'blending'})">Blending</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="career.html" onclick="showPage('career')">Careers</a></li>
+                    <li><a href="quote.html" onclick="showPage('quote')">Request Quote</a></li>
+                    <li><a href="admin.html" onclick="showPage('admin')">Admin Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 XYZ Pharmaceuticals. All rights reserved.</span>
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:rgba(138,154,176,0.5);">v2.4.1</span>
+        </div>
+    </footer>
+    <script src="~/Website/assets/js/main.js"></script>
+</body>
+</html>

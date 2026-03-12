@@ -1,0 +1,86 @@
+﻿@model IEnumerable<eProject3.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contact Messages";
+    Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
+}
+
+<div class="page-content">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div>
+            <div class="breadcrumb-custom">
+                <i class="bi bi-house-fill"></i>
+                <i class="bi bi-chevron-right"></i>
+                <span>Dashboard</span>
+                <i class="bi bi-chevron-right"></i>
+                <span>Contact Messages</span>
+            </div>
+
+            <div class="page-hd-title">Contact Messages</div>
+            <div class="page-hd-sub">
+                Messages submitted through the Contact Us page.
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT MESSAGES TABLE -->
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    int count = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Subject</td>
+                            <td class="threedots" title="@item.Message">
+                                @item.Message
+                            </td>
+                            <td>@item.CreatedAt.ToString("dd MMM yyyy")</td>
+
+                            <td>
+                                <a class="btn-sm-icon btn-view" asp-controller="Admin" asp-action="Msgview" asp-route-id="@item.Id" title="view">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <button class="btn-sm-icon btn-delete" onclick="deleteMsg(@item.Id)" title="Delete">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">
+                            No messages found.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

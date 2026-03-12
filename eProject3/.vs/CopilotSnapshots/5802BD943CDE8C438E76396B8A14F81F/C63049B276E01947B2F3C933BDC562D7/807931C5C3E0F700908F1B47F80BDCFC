@@ -1,0 +1,10 @@
+﻿namespace eProject3.Models
+{
+    public class MedicalDbContext : DbContext
+    {
+        public MedicalDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
+    }
+}

@@ -1,0 +1,2 @@
+C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\quotes.js
+C:\Users\Dell\Desktop\Visual Studio\E-project\eProject3\eProject3\wwwroot\Dashboard\assets\js\products.js

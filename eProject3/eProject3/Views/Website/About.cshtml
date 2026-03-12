@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page active" id="page-about">
+    <div class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-content">
+            <div class="section-tag">Who We Are</div>
+            <h1>About XYZ Pharmaceuticals</h1>
+            <p>Three decades of pharmaceutical manufacturing expertise</p>
+        </div>
+    </div>
+    <section class="section">
+        <div class="grid-2" style="gap:4rem;align-items:start;">
+            <div>
+                <div class="section-tag">Our Story</div>
+                <h2 class="section-title" style="margin-bottom:1.5rem;">From a Vision to a<br />Global Leader</h2>
+                <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem;font-size:0.95rem;">
+                    Founded in 1994, XYZ Pharmaceuticals began as a small workshop with a single mission: to provide the pharmaceutical industry with equipment that combines German engineering precision with accessible pricing. Today, we are a global organization with operations in 40+ countries.
+                </p>
+                <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem;font-size:0.95rem;">
+                    Our R&D intensive approach means we constantly innovate. Every machine we design is tested to exceed GMP compliance standards, ensuring your manufacturing process is safe, consistent, and auditable.
+                </p>
+                <p style="color:var(--text-muted);line-height:1.85;font-size:0.95rem;">
+                    We specialize in Capsule/Encapsulation, Tablet, Liquid Filling, Blending, Process Equipment, and Used Equipment — providing complete turnkey solutions for pharmaceutical facilities of every scale.
+                </p>
+                <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+                    <button class="btn btn-primary" onclick="showPage('products')">View Products</button>
+                    <button class="btn btn-outline" onclick="showPage('contact')">Get In Touch</button>
+                </div>
+            </div>
+            <div>
+                <div class="grid-2" style="gap:1rem;">
+                    <div class="card" style="text-align:center;padding:2rem 1.25rem;">
+                        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--teal);font-weight:700;">30+</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Years Experience</div>
+                    </div>
+                    <div class="card" style="text-align:center;padding:2rem 1.25rem;">
+                        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:700;">500+</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Machines Deployed</div>
+                    </div>
+                    <div class="card" style="text-align:center;padding:2rem 1.25rem;">
+                        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--teal);font-weight:700;">40+</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Countries Served</div>
+                    </div>
+                    <div class="card" style="text-align:center;padding:2rem 1.25rem;">
+                        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:700;">150+</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Team Members</div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:1rem;">
+                    <div class="card-sub">Core Values</div>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;">
+                            <span style="color:var(--teal);font-size:1.1rem;line-height:1.4;">◆</span>
+                            <div>
+                                <div style="font-weight:600;color:var(--text-head);font-size:0.9rem;">Precision Engineering</div>
+                                <div style="font-size:0.82rem;color:var(--text-muted);margin-top:2px;">Every component machined to micron-level tolerances</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;">
+                            <span style="color:var(--teal);font-size:1.1rem;line-height:1.4;">◆</span>
+                            <div>
+                                <div style="font-weight:600;color:var(--text-head);font-size:0.9rem;">Customer First</div>
+                                <div style="font-size:0.82rem;color:var(--text-muted);margin-top:2px;">Dedicated account managers and after-sales support</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;align-items:flex-start;">
+                            <span style="color:var(--teal);font-size:1.1rem;line-height:1.4;">◆</span>
+                            <div>
+                                <div style="font-weight:600;color:var(--text-head);font-size:0.9rem;">Continuous Innovation</div>
+                                <div style="font-size:0.82rem;color:var(--text-muted);margin-top:2px;">12% of revenue re-invested in R&D annually</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+        <div class="section-header">
+            <div class="section-tag">Leadership Team</div>
+            <h2 class="section-title">The People Behind the Machines</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card" style="text-align:center;">
+                <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#1c6a60);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--bg);margin:0 auto 1rem;">AA</div>
+                <div class="card-title">Dr. Ahmed Ali</div>
+                <div class="card-sub">Chief Executive Officer</div>
+                <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">25 years in pharmaceutical engineering. Former VP at Bosch Packaging.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#1c6a60);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--bg);margin:0 auto 1rem;">AS</div>
+                <div class="card-title">Amanullah Saleem</div>
+                <div class="card-sub">Head of R&D</div>
+                <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">PhD in Mechanical Engineering. 18 patents in pharmaceutical automation.</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#6e8bff,#1c6a60);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--bg);margin:0 auto 1rem;">BY</div>
+                <div class="card-title">BurhanUddin Yousuf</div>
+                <div class="card-sub">Director of Operations</div>
+                <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">MBA, IIM Ahmedabad. Oversees global supply chain and manufacturing.</p>
+            </div>
+        </div>
+    </section>
+
+</div>

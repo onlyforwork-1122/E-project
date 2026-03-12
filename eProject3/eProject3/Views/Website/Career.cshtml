@@ -1,0 +1,488 @@
+﻿@{
+    ViewData["Title"] = "Career";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="modal-overlay" id="email-modal">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">Compose Email</div>
+            <button class="modal-close" onclick="closeEmailModal()">✕</button>
+        </div>
+        <div id="email-send-success" class="alert alert-success hidden">✓ Email sent successfully!</div>
+        <div class="form-group">
+            <label>To</label>
+            <input type="email" id="email-to" readonly style="opacity:0.7;" />
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-top:-0.75rem;margin-bottom:1rem;" id="email-to-name"></div>
+        <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="email-subject" placeholder="Interview Invitation — XYZ Pharmaceuticals" />
+        </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea id="email-body" rows="8" placeholder="Dear [Name],&#10;&#10;We are pleased to invite you for an interview at XYZ Pharmaceuticals..."></textarea>
+        </div>
+        <div style="display:flex;gap:1rem;justify-content:flex-end;">
+            <button class="btn btn-outline" onclick="closeEmailModal()">Cancel</button>
+            <button class="btn btn-primary" onclick="sendEmail()">Send Email →</button>
+        </div>
+    </div>
+</div>
+
+<div class="page active" id="page-career">
+    <div class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-content">
+            <div class="section-tag">Join Our Team</div>
+            <h1>Careers at XYZ Pharma</h1>
+            <p>Build the future of pharmaceutical manufacturing with us</p>
+        </div>
+    </div>
+
+    <!-- Career Landing (not logged in) -->
+    <div id="career-landing">
+        <section class="section">
+            <div class="grid-2" style="gap:3rem;align-items:start;">
+
+                <!-- Login Panel -->
+                <div class="card">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchCareerTab('login')">Candidate Login</button>
+                        <button class="tab-btn" onclick="switchCareerTab('register')">Create Account</button>
+                    </div>
+
+                    <!-- LOGIN -->
+                    <div class="tab-content active" id="career-tab-login">
+                        <h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:1.5rem;">Welcome Back</h3>
+                        <div id="login-error" class="alert alert-error hidden">✗ Invalid email or password. Please try again.</div>
+                        <div class="form-group"><label>Email Address</label><input type="email" id="login-email" placeholder="you@email.com" /></div>
+                        <div class="form-group"><label>Password</label><input type="password" id="login-pass" placeholder="••••••••" /></div>
+                        <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;" onclick="doLogin()">Login to My Account →</button>
+                        <p style="text-align:center;color:var(--text-muted);font-size:0.82rem;margin-top:1rem;">Don't have an account? <a style="color:var(--teal);cursor:pointer;" onclick="switchCareerTab('register')">Create one here</a></p>
+                    </div>
+
+                    <!-- REGISTER -->
+                    <div class="tab-content" id="career-tab-register">
+                        <h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:1.5rem;">Create Your Profile</h3>
+                        <div id="reg-error" class="alert alert-error hidden"></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>First Name *</label><input type="text" id="reg-fname" placeholder="First Name" /></div>
+                            <div class="form-group"><label>Last Name *</label><input type="text" id="reg-lname" placeholder="Last Name" /></div>
+                        </div>
+                        <div class="form-group"><label>Email Address *</label><input type="email" id="reg-email" placeholder="you@email.com" /></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Password *</label><input type="password" id="reg-pass" placeholder="Min. 8 characters" /></div>
+                            <div class="form-group"><label>Confirm Password *</label><input type="password" id="reg-pass2" placeholder="Re-enter password" /></div>
+                        </div>
+                        <div class="form-group"><label>Phone</label><input type="tel" id="reg-phone" placeholder="+91 98000 00000" /></div>
+                        <div class="form-group">
+                            <label>Applying For</label>
+                            <select id="reg-role">
+                                <option>Mechanical Engineer</option>
+                                <option>Electrical Engineer</option>
+                                <option>Software / Automation Engineer</option>
+                                <option>Sales Executive</option>
+                                <option>Quality Assurance</option>
+                                <option>Service Engineer</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;" onclick="doRegister()">Create Account →</button>
+                    </div>
+                </div>
+
+                <!-- Job Openings -->
+                <div>
+                    <h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:1.5rem;">Current Openings</h3>
+                    <div style="display:flex;flex-direction:column;gap:1rem;">
+                        <div class="card" style="padding:1.25rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                                <div>
+                                    <div style="font-weight:700;color:var(--text-head);">Mechanical Design Engineer</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);margin-top:3px;">Mumbai · Full Time · 3–6 Years Exp</div>
+                                </div>
+                                <span class="badge badge-new">New</span>
+                            </div>
+                        </div>
+                        <div class="card" style="padding:1.25rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                                <div>
+                                    <div style="font-weight:700;color:var(--text-head);">Automation & PLC Engineer</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);margin-top:3px;">Pune · Full Time · 2–5 Years Exp</div>
+                                </div>
+                                <span class="badge badge-new">New</span>
+                            </div>
+                        </div>
+                        <div class="card" style="padding:1.25rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                                <div>
+                                    <div style="font-weight:700;color:var(--text-head);">International Sales Manager</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);margin-top:3px;">Mumbai · Full Time · 5–10 Years Exp</div>
+                                </div>
+                                <span class="badge badge-reviewed">Urgent</span>
+                            </div>
+                        </div>
+                        <div class="card" style="padding:1.25rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                                <div>
+                                    <div style="font-weight:700;color:var(--text-head);">Service & Field Engineer</div>
+                                    <div style="font-size:0.8rem;color:var(--text-muted);margin-top:3px;">Multiple Locations · 1–3 Years Exp</div>
+                                </div>
+                                <span class="badge badge-new">New</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Candidate Dashboard (logged in) -->
+    <div id="career-dashboard" class="hidden">
+        <div class="dash-layout">
+
+            <!-- ── CANDIDATE SIDEBAR ── -->
+            <aside class="dash-sidebar" id="cand-sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-user">
+                        <div class="sidebar-avatar" id="cand-sb-avatar">--</div>
+                        <div class="sidebar-user-info">
+                            <div class="sidebar-user-name" id="cand-sb-name">Candidate</div>
+                            <div class="sidebar-user-role" id="cand-sb-role">Job Applicant</div>
+                        </div>
+                    </div>
+                    <button class="sidebar-collapse-btn" onclick="toggleSidebar('cand-sidebar')" title="Collapse sidebar">‹</button>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-section-label">My Profile</div>
+                    <div class="sidebar-nav-item active" href="candidate_overview.html" onclick="event.preventDefault();window.location='candidate_overview.html'" id="cand-nav-overview">
+                        <span class="sidebar-nav-icon">⊞</span>
+                        <span class="sidebar-nav-label">Overview</span>
+                        <span class="sidebar-tooltip">Overview</span>
+                    </div>
+                    <div class="sidebar-nav-item" href="candidate_personal.html" onclick="event.preventDefault();window.location='candidate_personal.html'" id="cand-nav-personal">
+                        <span class="sidebar-nav-icon">👤</span>
+                        <span class="sidebar-nav-label">Personal Details</span>
+                        <span class="sidebar-tooltip">Personal Details</span>
+                    </div>
+                    <div class="sidebar-nav-item" href="candidate_education.html" onclick="event.preventDefault();window.location='candidate_education.html'" id="cand-nav-education">
+                        <span class="sidebar-nav-icon">🎓</span>
+                        <span class="sidebar-nav-label">Education</span>
+                        <span class="sidebar-tooltip">Education</span>
+                    </div>
+                    <div class="sidebar-nav-item" href="candidate_resume.html" onclick="event.preventDefault();window.location='candidate_resume.html'" id="cand-nav-resume">
+                        <span class="sidebar-nav-icon">📄</span>
+                        <span class="sidebar-nav-label">Resume Upload</span>
+                        <span class="sidebar-tooltip">Resume Upload</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-section-label">Applications</div>
+                    <div class="sidebar-nav-item" href="candidate_applications.html" onclick="event.preventDefault();window.location='candidate_applications.html'" id="cand-nav-applications">
+                        <span class="sidebar-nav-icon">📋</span>
+                        <span class="sidebar-nav-label">My Applications</span>
+                        <span class="sidebar-badge">2</span>
+                        <span class="sidebar-tooltip">My Applications</span>
+                    </div>
+                    <div class="sidebar-nav-item" href="candidate_notifications.html" onclick="event.preventDefault();window.location='candidate_notifications.html'" id="cand-nav-notifications">
+                        <span class="sidebar-nav-icon">🔔</span>
+                        <span class="sidebar-nav-label">Notifications</span>
+                        <span class="sidebar-badge" style="background:var(--danger);">1</span>
+                        <span class="sidebar-tooltip">Notifications</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="sidebar-nav-item" onclick="doLogout()" style="color:var(--danger);">
+                        <span class="sidebar-nav-icon" style="color:var(--danger);">⇠</span>
+                        <span class="sidebar-nav-label" style="color:var(--danger);">Logout</span>
+                        <span class="sidebar-tooltip">Logout</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ── CANDIDATE MAIN ── -->
+            <div class="dash-main">
+                <!-- Topbar -->
+                <div class="dash-topbar">
+                    <div class="dash-topbar-left">
+                        <div>
+                            <div class="dash-breadcrumb">Careers <span>›</span> <span id="cand-breadcrumb">Overview</span></div>
+                            <div class="dash-page-title" id="cand-page-title">Dashboard Overview</div>
+                        </div>
+                    </div>
+                    <div class="dash-topbar-right">
+                        <button class="notif-btn" title="Notifications">🔔<span class="notif-dot"></span></button>
+                        <button class="btn btn-outline btn-sm" onclick="doLogout()">← Logout</button>
+                    </div>
+                </div>
+
+                <div class="dash-content">
+
+                    <!-- PANEL: Overview -->
+                    <div class="dash-panel active" id="dash-panel-overview">
+                        <div class="dash-stats-row">
+                            <div class="dash-stat" style="--stat-accent:var(--teal)">
+                                <div class="dash-stat-icon">📋</div>
+                                <div class="dash-stat-value">2</div>
+                                <div class="dash-stat-label">Applications</div>
+                                <div class="dash-stat-change">↑ 1 this week</div>
+                            </div>
+                            <div class="dash-stat" style="--stat-accent:var(--gold)">
+                                <div class="dash-stat-icon">👁</div>
+                                <div class="dash-stat-value">5</div>
+                                <div class="dash-stat-label">Profile Views</div>
+                                <div class="dash-stat-change" style="color:var(--gold);">↑ 2 this week</div>
+                            </div>
+                            <div class="dash-stat" style="--stat-accent:var(--success)">
+                                <div class="dash-stat-icon">✉</div>
+                                <div class="dash-stat-value">1</div>
+                                <div class="dash-stat-label">Messages</div>
+                                <div class="dash-stat-change" style="color:var(--success);">New message!</div>
+                            </div>
+                            <div class="dash-stat" style="--stat-accent:#6e8bff">
+                                <div class="dash-stat-icon">📄</div>
+                                <div class="dash-stat-value" id="cand-stat-resume">—</div>
+                                <div class="dash-stat-label">Resume</div>
+                                <div class="dash-stat-change" style="color:#6e8bff;" id="cand-stat-resume-sub">Not uploaded</div>
+                            </div>
+                        </div>
+
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+                            <div class="dash-section-card">
+                                <div class="dash-section-head">
+                                    <div class="dash-section-title">Profile Completion</div>
+                                    <span style="font-size:0.78rem;color:var(--text-muted);" id="cand-profile-pct">40%</span>
+                                </div>
+                                <div class="dash-section-body">
+                                    <div class="progress-bar-wrap">
+                                        <div class="progress-bar-label"><span>Overall</span><span id="cand-pct-label">40%</span></div>
+                                        <div class="progress-bar-track"><div class="progress-bar-fill" id="cand-profile-bar" style="width:40%"></div></div>
+                                    </div>
+                                    <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.75rem;">
+                                        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;">
+                                            <span style="color:var(--text-muted);">👤 Personal Details</span>
+                                            <span id="step-personal" style="color:var(--success);">✓ Done</span>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;">
+                                            <span style="color:var(--text-muted);">🎓 Education</span>
+                                            <span id="step-education" style="color:var(--text-muted);">Pending</span>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;">
+                                            <span style="color:var(--text-muted);">📄 Resume</span>
+                                            <span id="step-resume" style="color:var(--text-muted);">Pending</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm" style="margin-top:1.25rem;width:100%;" href="candidate_personal.html" onclick="event.preventDefault();window.location='candidate_personal.html'">Complete Profile →</button>
+                                </div>
+                            </div>
+
+                            <div class="dash-section-card">
+                                <div class="dash-section-head">
+                                    <div class="dash-section-title">Recent Activity</div>
+                                </div>
+                                <div class="dash-section-body" style="padding:0.5rem 1.5rem;">
+                                    <div class="activity-item">
+                                        <div class="activity-dot"></div>
+                                        <div>
+                                            <div class="activity-text">Application submitted for <strong>Mechanical Engineer</strong></div>
+                                            <div class="activity-time">2 days ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-dot gold"></div>
+                                        <div>
+                                            <div class="activity-text">Profile viewed by HR team</div>
+                                            <div class="activity-time">3 days ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-dot muted"></div>
+                                        <div>
+                                            <div class="activity-text">Account created successfully</div>
+                                            <div class="activity-time">5 days ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dash-section-card" style="margin-top:1.5rem;">
+                            <div class="dash-section-head">
+                                <div class="dash-section-title">Open Positions You May Like</div>
+                                <button class="btn btn-outline btn-sm" onclick="showPage('career')">View All</button>
+                            </div>
+                            <div class="dash-section-body" style="display:flex;flex-direction:column;gap:0.75rem;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem;background:var(--bg-secondary);border-radius:6px;flex-wrap:wrap;gap:0.5rem;">
+                                    <div><div style="font-weight:600;font-size:0.875rem;color:var(--text-head);">Mechanical Design Engineer</div><div style="font-size:0.78rem;color:var(--text-muted);">Mumbai · Full Time · 3–6 yrs</div></div>
+                                    <span class="badge badge-new">New</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem;background:var(--bg-secondary);border-radius:6px;flex-wrap:wrap;gap:0.5rem;">
+                                    <div><div style="font-weight:600;font-size:0.875rem;color:var(--text-head);">Service & Field Engineer</div><div style="font-size:0.78rem;color:var(--text-muted);">Multiple Locations · 1–3 yrs</div></div>
+                                    <span class="badge badge-new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Personal -->
+                    <div class="dash-panel" id="dash-panel-personal">
+                        <div class="dash-section-card">
+                            <div class="dash-section-head">
+                                <div class="dash-section-title">Personal Details</div>
+                                <span style="font-size:0.78rem;color:var(--text-muted);">Keep your info up to date</span>
+                            </div>
+                            <div class="dash-section-body">
+                                <div class="form-row">
+                                    <div class="form-group"><label>First Name</label><input type="text" id="d-fname" placeholder="First Name" /></div>
+                                    <div class="form-group"><label>Last Name</label><input type="text" id="d-lname" placeholder="Last Name" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Email</label><input type="email" id="d-email" placeholder="Email" readonly style="opacity:0.6;" /></div>
+                                    <div class="form-group"><label>Phone</label><input type="tel" id="d-phone" placeholder="+91 98000 00000" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Date of Birth</label><input type="date" id="d-dob" /></div>
+                                    <div class="form-group"><label>Gender</label><select id="d-gender"><option value="">Select...</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
+                                </div>
+                                <div class="form-group"><label>Address</label><textarea id="d-address" rows="3" placeholder="Full residential address"></textarea></div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>City</label><input type="text" id="d-city" placeholder="City" /></div>
+                                    <div class="form-group"><label>State</label><input type="text" id="d-state" placeholder="State" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Pincode</label><input type="text" id="d-pincode" placeholder="Pincode" /></div>
+                                    <div class="form-group"><label>Country</label><input type="text" id="d-country" placeholder="India" /></div>
+                                </div>
+                                <button class="btn btn-primary" onclick="savePersonal()">Save Personal Details →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Education -->
+                    <div class="dash-panel" id="dash-panel-education">
+                        <div class="dash-section-card">
+                            <div class="dash-section-head">
+                                <div class="dash-section-title">Education & Experience</div>
+                            </div>
+                            <div class="dash-section-body">
+                                <div class="card-sub" style="margin-bottom:1rem;">Highest Qualification</div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Degree / Qualification</label><select id="edu-degree"><option value="">Select...</option><option>High School / 12th</option><option>Diploma</option><option>Bachelor's (B.E./B.Tech)</option><option>Master's (M.E./M.Tech/MBA)</option><option>PhD / Doctorate</option><option>Other</option></select></div>
+                                    <div class="form-group"><label>Field / Specialization</label><input type="text" id="edu-field" placeholder="e.g. Mechanical Engineering" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Institution Name</label><input type="text" id="edu-inst" placeholder="University / College Name" /></div>
+                                    <div class="form-group"><label>Year of Passing</label><input type="number" id="edu-year" placeholder="2020" min="1970" max="2030" /></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label>Grade / CGPA / %</label><input type="text" id="edu-grade" placeholder="e.g. 8.2 CGPA / 82%" /></div>
+                                    <div class="form-group"><label>Mode</label><select id="edu-mode"><option>Full Time</option><option>Part Time</option><option>Distance Learning</option></select></div>
+                                </div>
+                                <div class="sidebar-divider" style="margin:1.25rem 0;"></div>
+                                <div class="card-sub" style="margin-bottom:1rem;">Work Experience</div>
+                                <div class="form-group"><label>Total Experience</label><select id="edu-exp"><option>Fresher (0–1 year)</option><option>1–2 years</option><option>2–5 years</option><option>5–10 years</option><option>10+ years</option></select></div>
+                                <div class="form-group"><label>Current / Last Employer</label><input type="text" id="edu-employer" placeholder="Company Name (if applicable)" /></div>
+                                <div class="form-group"><label>Skills (comma separated)</label><input type="text" id="edu-skills" placeholder="e.g. AutoCAD, PLC Programming, GMP, HVAC" /></div>
+                                <div class="form-group"><label>Cover Letter / Additional Info</label><textarea id="edu-cover" rows="5" placeholder="Tell us why you're the right candidate..."></textarea></div>
+                                <button class="btn btn-primary" onclick="saveEducation()">Save Education Details →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Resume -->
+                    <div class="dash-panel" id="dash-panel-resume">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
+                            <div class="dash-section-card">
+                                <div class="dash-section-head"><div class="dash-section-title">Upload Resume</div></div>
+                                <div class="dash-section-body">
+                                    <div class="card" style="border:2px dashed rgba(0,158,136,0.3);text-align:center;padding:3rem;cursor:pointer;background:var(--bg-secondary);" id="resume-drop-zone" onclick="document.getElementById('resume-input').click()">
+                                        <div style="font-size:2.5rem;margin-bottom:1rem;">📄</div>
+                                        <div style="font-weight:600;color:var(--text-head);margin-bottom:0.5rem;">Click to Upload Your Resume</div>
+                                        <div style="font-size:0.85rem;color:var(--text-muted);">PDF, DOC, DOCX · Max 5 MB</div>
+                                        <input type="file" id="resume-input" style="display:none;" accept=".pdf,.doc,.docx" onchange="handleResumeUpload(event)" />
+                                    </div>
+                                    <div id="resume-status" class="hidden" style="margin-top:1rem;"></div>
+                                </div>
+                            </div>
+                            <div class="dash-section-card">
+                                <div class="dash-section-head"><div class="dash-section-title">Resume Tips</div></div>
+                                <div class="dash-section-body" style="padding:0.5rem 1.5rem;">
+                                    <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Use a clean, single-column layout for ATS compatibility</div></div></div>
+                                    <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Include relevant keywords from the job description</div></div></div>
+                                    <div class="activity-item"><div class="activity-dot gold"></div><div><div class="activity-text">Quantify achievements (e.g. "Reduced downtime by 20%")</div></div></div>
+                                    <div class="activity-item"><div class="activity-dot gold"></div><div><div class="activity-text">Keep to 1–2 pages; be concise and relevant</div></div></div>
+                                    <div class="activity-item"><div class="activity-dot muted"></div><div><div class="activity-text">Save as PDF before uploading to preserve formatting</div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Applications -->
+                    <div class="dash-panel" id="dash-panel-applications">
+                        <div class="dash-section-card">
+                            <div class="dash-section-head">
+                                <div class="dash-section-title">My Applications</div>
+                                <span class="badge badge-new">2 Active</span>
+                            </div>
+                            <div class="dash-section-body" style="display:flex;flex-direction:column;gap:1rem;">
+                                <div style="border:1px solid var(--border);border-radius:8px;padding:1.25rem;display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">
+                                    <div style="flex:1;min-width:180px;">
+                                        <div style="font-weight:700;color:var(--text-head);margin-bottom:4px;">Mechanical Design Engineer</div>
+                                        <div style="font-size:0.82rem;color:var(--text-muted);">Mumbai · Full Time · Applied 2 days ago</div>
+                                    </div>
+                                    <span class="badge badge-reviewed">Under Review</span>
+                                </div>
+                                <div style="border:1px solid var(--border);border-radius:8px;padding:1.25rem;display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">
+                                    <div style="flex:1;min-width:180px;">
+                                        <div style="font-weight:700;color:var(--text-head);margin-bottom:4px;">Service & Field Engineer</div>
+                                        <div style="font-size:0.82rem;color:var(--text-muted);">Pune · Applied 5 days ago</div>
+                                    </div>
+                                    <span class="badge badge-new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Notifications -->
+                    <div class="dash-panel" id="dash-panel-notifications">
+                        <div class="dash-section-card">
+                            <div class="dash-section-head"><div class="dash-section-title">Notifications</div></div>
+                            <div class="dash-section-body" style="padding:0.5rem 1.5rem;">
+                                <div class="activity-item">
+                                    <div class="activity-dot" style="background:var(--danger);"></div>
+                                    <div>
+                                        <div class="activity-text"><strong>Interview Invitation:</strong> HR has reviewed your profile and would like to schedule an interview. Please check your email.</div>
+                                        <div class="activity-time">1 hour ago · Unread</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-dot"></div>
+                                    <div>
+                                        <div class="activity-text">Your application for <strong>Mechanical Design Engineer</strong> is under review.</div>
+                                        <div class="activity-time">2 days ago</div>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-dot muted"></div>
+                                    <div>
+                                        <div class="activity-text">Welcome to XYZ Pharmaceuticals Careers Portal! Complete your profile to improve visibility.</div>
+                                        <div class="activity-time">5 days ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /dash-content -->
+            </div><!-- /dash-main -->
+        </div><!-- /dash-layout -->
+    </div>
+
+
+</div>

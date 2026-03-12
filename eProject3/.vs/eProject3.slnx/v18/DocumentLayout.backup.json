@@ -1,0 +1,298 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\shared\\dashboard_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\shared\\dashboard_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\wwwroot\\dashboard\\assets\\css\\shared.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\wwwroot\\dashboard\\assets\\css\\shared.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\wwwroot\\dashboard\\assets\\js\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\wwwroot\\dashboard\\assets\\js\\shared.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\admin\\quoteus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\quoteus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\wwwroot\\dashboard\\assets\\css\\messages.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\wwwroot\\dashboard\\assets\\css\\messages.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\admin\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\messages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\admin\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\website\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\website\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\models\\tabletmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\tabletmachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\capsulemachine\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\capsulemachine\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\visual studio\\e-project\\eproject3\\eproject3\\views\\admin\\msgview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\msgview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "shared.js",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\js\\shared.js",
+              "RelativeDocumentMoniker": "eProject3\\wwwroot\\Dashboard\\assets\\js\\shared.js",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\js\\shared.js",
+              "RelativeToolTip": "eProject3\\wwwroot\\Dashboard\\assets\\js\\shared.js",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-12T11:26:00.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Shared\\Dashboard_Layout.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Shared\\Dashboard_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Shared\\Dashboard_Layout.cshtml*",
+              "RelativeToolTip": "eProject3\\Views\\Shared\\Dashboard_Layout.cshtml*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T12:33:05.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QuoteUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\QuoteUs.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\QuoteUs.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\QuoteUs.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\QuoteUs.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T10:34:33.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "shared.css",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\css\\shared.css",
+              "RelativeDocumentMoniker": "eProject3\\wwwroot\\Dashboard\\assets\\css\\shared.css",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\css\\shared.css",
+              "RelativeToolTip": "eProject3\\wwwroot\\Dashboard\\assets\\css\\shared.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-12T12:28:36.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "eProject3\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "eProject3\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T10:40:37.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "messages.css",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\css\\messages.css",
+              "RelativeDocumentMoniker": "eProject3\\wwwroot\\Dashboard\\assets\\css\\messages.css",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\wwwroot\\Dashboard\\assets\\css\\messages.css",
+              "RelativeToolTip": "eProject3\\wwwroot\\Dashboard\\assets\\css\\messages.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-12T12:27:19.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Messages.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Messages.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\Messages.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Messages.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\Messages.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T11:08:08.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Msgview.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Msgview.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\Msgview.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Msgview.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\Msgview.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T12:04:35.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "eProject3\\Models\\Contact.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Models\\Contact.cs",
+              "RelativeToolTip": "eProject3\\Models\\Contact.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T11:47:20.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Products.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\Products.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Admin\\Products.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\Products.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T10:24:38.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Program.cs",
+              "RelativeDocumentMoniker": "eProject3\\Program.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Program.cs",
+              "RelativeToolTip": "eProject3\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T10:13:59.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\appsettings.json",
+              "RelativeDocumentMoniker": "eProject3\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\appsettings.json",
+              "RelativeToolTip": "eProject3\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-11T12:53:08.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBMAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T12:42:20.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TabletMachine.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Models\\TabletMachine.cs",
+              "RelativeDocumentMoniker": "eProject3\\Models\\TabletMachine.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Models\\TabletMachine.cs",
+              "RelativeToolTip": "eProject3\\Models\\TabletMachine.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:29:46.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Products.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Website\\Products.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Website\\Products.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\Website\\Products.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Website\\Products.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T11:38:44.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\CapsuleMachine\\Index.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\CapsuleMachine\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Views\\CapsuleMachine\\Index.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\CapsuleMachine\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T11:49:36.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WebsiteController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Controllers\\WebsiteController.cs",
+              "RelativeDocumentMoniker": "eProject3\\Controllers\\WebsiteController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\Visual Studio\\E-project\\eProject3\\eProject3\\Controllers\\WebsiteController.cs",
+              "RelativeToolTip": "eProject3\\Controllers\\WebsiteController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T11:34:07.636Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
