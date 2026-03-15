@@ -36,48 +36,19 @@
 
             <div class="card-body" style="padding-top:8px;">
                 <div id="edu-list">
-
-                    <div class="list-item">
-                        <div class="list-icon edu">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                    @foreach (var item in ViewBag.Education)
+                    {
+                        <div class="list-item">
+                            <div class="list-icon edu">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+                            </div>
+                            <div style="flex:1;">
+                                <div class="list-title">@item.Degree</div>
+                                <div class="list-sub">@item.Institution</div>
+                                <div class="list-meta">@item.StartYear - @item.EndYear · @item.Grade</div>
+                            </div>
                         </div>
-                        <div style="flex:1;">
-                            <div class="list-title">Bachelor of Pharmacy (B.Pharm)</div>
-                            <div class="list-sub">University of Karachi</div>
-                            <div class="list-meta">2016 – 2020 &nbsp;·&nbsp; First Division &nbsp;·&nbsp; CGPA 3.6/4.0</div>
-                        </div>
-                        <div class="list-action">
-                            <span class="badge badge-success">Completed</span>
-                        </div>
-                    </div>
-
-                    <div class="list-item">
-                        <div class="list-icon edu">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
-                        </div>
-                        <div style="flex:1;">
-                            <div class="list-title">Intermediate — Pre-Medical (HSSC)</div>
-                            <div class="list-sub">Government Degree College, Karachi</div>
-                            <div class="list-meta">2014 – 2016 &nbsp;·&nbsp; A Grade &nbsp;·&nbsp; 87%</div>
-                        </div>
-                        <div class="list-action">
-                            <span class="badge badge-success">Completed</span>
-                        </div>
-                    </div>
-
-                    <div class="list-item" style="border-bottom:none;">
-                        <div class="list-icon edu">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
-                        </div>
-                        <div style="flex:1;">
-                            <div class="list-title">Matriculation (SSC)</div>
-                            <div class="list-sub">Foundation Public School, Karachi</div>
-                            <div class="list-meta">2012 – 2014 &nbsp;·&nbsp; A1 Grade &nbsp;·&nbsp; 92%</div>
-                        </div>
-                        <div class="list-action">
-                            <span class="badge badge-success">Completed</span>
-                        </div>
-                    </div>
+                    }
 
                 </div>
             </div>
@@ -149,113 +120,78 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
             </button>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-            <div class="field"><label>Degree / Qualification</label><input id="e-degree" type="text" placeholder="e.g. Bachelor of Pharmacy" /></div>
-            <div class="field"><label>Institution</label><input id="e-inst" type="text" placeholder="University or college name" /></div>
-            <div class="form-grid">
-                <div class="field"><label>Start year</label><input id="e-start" type="number" placeholder="2018" min="1990" max="2030" /></div>
-                <div class="field"><label>End year</label><input id="e-end" type="number" placeholder="2022" min="1990" max="2030" /></div>
-            </div>
-            <div class="field"><label>Grade / CGPA / Division</label><input id="e-grade" type="text" placeholder="e.g. First Division, 3.7/4.0" /></div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-outline" onclick="closeModal('edu-modal')">Cancel</button>
-            <button class="btn btn-primary" onclick="addEdu()">Add Qualification</button>
-        </div>
-    </div>
-</div>
-
-<!-- Add Experience Modal -->
-<div class="modal-overlay" id="exp-modal">
-    <div class="modal">
-        <div class="modal-head">
-            <div class="modal-title">Add Work Experience</div>
-            <button class="modal-close" onclick="closeModal('exp-modal')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
-            </button>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-            <div class="field"><label>Job title</label><input id="x-title" type="text" placeholder="e.g. Lab Technician" /></div>
-            <div class="field"><label>Company / Organization</label><input id="x-company" type="text" placeholder="Company name" /></div>
-            <div class="form-grid">
-                <div class="field"><label>Start date</label><input id="x-start" type="month" /></div>
-                <div class="field"><label>End date (leave blank if current)</label><input id="x-end" type="month" /></div>
+        <form asp-action="AddEducation" method="post">
+            <div class="field">
+                <label>Degree / Qualification</label>
+                <input name="Degree" type="text" placeholder="Bachelor of Pharmacy" required />
             </div>
             <div class="field">
-                <label>Employment type</label>
-                <select id="x-type">
-                    <option>Full-time</option>
-                    <option>Part-time</option>
-                    <option>Internship</option>
-                    <option>Contract</option>
-                </select>
+                <label>Institution</label>
+                <input name="Institution" type="text" placeholder="University or college name" required />
             </div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-outline" onclick="closeModal('exp-modal')">Cancel</button>
-            <button class="btn btn-primary" onclick="addExp()">Add Experience</button>
-        </div>
+            <div class="form-grid">
+                <div class="field">
+                    <label>Start year</label>
+                    <input name="StartYear" type="number" placeholder="2018" min="1990" max="2030" required />
+                </div>
+                <div class="field">
+                    <label>End year</label>
+                    <input name="EndYear" type="number" placeholder="2022" min="1990" max="2030" required />
+                </div>
+            </div>
+            <div class="field">
+                <label>Grade / CGPA / Division</label>
+                <input name="Grade" type="text" placeholder="First Division, 3.7/4.0" />
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Add Qualification</button>
+            </div>
+        </form>
     </div>
 </div>
 
 <div id="toast" class="toast success">
     <div class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12" /></svg></div>
     <span id="toast-msg"></span>
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
 </div>
 
 
 <script>
-    function addEdu() {
-      const degree = document.getElementById('e-degree').value.trim();
-      const inst   = document.getElementById('e-inst').value.trim();
-      const start  = document.getElementById('e-start').value.trim();
-      const end    = document.getElementById('e-end').value.trim();
-      const grade  = document.getElementById('e-grade').value.trim();
-      if (!degree || !inst) { showToast('Please enter degree and institution', 'error'); return; }
-      const row = document.createElement('div');
-      row.className = 'list-item';
-      row.innerHTML = `
-        <div class="list-icon edu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-        </div>
-        <div style="flex:1;">
-          <div class="list-title">${degree}</div>
-          <div class="list-sub">${inst}</div>
-          <div class="list-meta">${start && end ? start + ' – ' + end : start ? start + ' – Present' : ''} ${grade ? '&nbsp;·&nbsp; ' + grade : ''}</div>
-        </div>
-        <div class="list-action"><span class="badge ${end ? 'badge-success' : 'badge-info'}">${end ? 'Completed' : 'Ongoing'}</span></div>`;
-      document.getElementById('edu-list').appendChild(row);
-      ['e-degree','e-inst','e-start','e-end','e-grade'].forEach(id => document.getElementById(id).value = '');
-      closeModal('edu-modal');
-      showToast('Qualification added');
-    }
+            function addEdu() {
+        const degree = document.getElementById('e-degree').value.trim();
+        const inst = document.getElementById('e-inst').value.trim();
+        const start = parseInt(document.getElementById('e-start').value);
+        const end = parseInt(document.getElementById('e-end').value);
+        const grade = document.getElementById('e-grade').value.trim();
 
-    function addExp() {
-      const title   = document.getElementById('x-title').value.trim();
-      const company = document.getElementById('x-company').value.trim();
-      const start   = document.getElementById('x-start').value;
-      const end     = document.getElementById('x-end').value;
-      const type    = document.getElementById('x-type').value;
-      if (!title || !company) { showToast('Please enter job title and company', 'error'); return; }
-      const fmt = d => d ? new Date(d + '-01').toLocaleString('default',{month:'long', year:'numeric'}) : 'Present';
-      const row = document.createElement('div');
-      row.className = 'list-item';
-      row.style.borderBottom = 'none';
-      row.innerHTML = `
-        <div class="list-icon work">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-        </div>
-        <div style="flex:1;">
-          <div class="list-title">${title}</div>
-          <div class="list-sub">${company}</div>
-          <div class="list-meta">${fmt(start)} – ${fmt(end)} &nbsp;·&nbsp; ${type}</div>
-        </div>
-        <div class="list-action"><span class="badge ${end ? 'badge-success' : 'badge-info'}">${end ? 'Past' : 'Current'}</span></div>`;
-      const list = document.getElementById('exp-list');
-      list.querySelectorAll('.list-item').forEach(i => i.style.borderBottom = '');
-      list.appendChild(row);
-      ['x-title','x-company','x-start','x-end'].forEach(id => document.getElementById(id).value = '');
-      closeModal('exp-modal');
-      showToast('Experience added');
+        if (!degree || !inst) {
+            showToast('Please enter Degree and Institution', 'error');
+            return;
+        }
+
+        const data = { Degree: degree, Institution: inst, StartYear: start, EndYear: end, Grade: grade };
+
+        fetch('/Candidate/AddEducation', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            if (result.success) {
+                showToast("Education Added");
+                location.reload();
+            } else {
+                showToast(result.message, 'error');
+            }
+        });
     }
 </script>

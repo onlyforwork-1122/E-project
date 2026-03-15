@@ -6,25 +6,12 @@ namespace eProject3.Models
 {
     public class CandidateEducation
     {
-
-        [Key]
         public int Id { get; set; }
-
         public int CandidateId { get; set; }
-
-        [ForeignKey("CandidateId")]
-        public Candidate Candidate { get; set; }
-
-
-        [Required]
-        [StringLength(200)]
         public string Degree { get; set; }
-
-
-        [Required]
-        [StringLength(200)]
-        public string Institute { get; set; }
-
-        public string Year { get; set; }
+        public string Institution { get; set; }
+        public int StartYear { get; set; }
+        public int EndYear { get; set; }
+        public string Grade { get; set; }
     }
 }

@@ -41,6 +41,15 @@ namespace eProject3.Controllers
             {
                 return RedirectToAction("Career", "Website");
             }
+            int? candidateId = HttpContext.Session.GetInt32("CandidateId");
+
+            var edu = medicalDb.tbl_CandidateEducations
+                .Where(x => x.CandidateId == candidateId)
+                .ToList();
+
+
+            ViewBag.Education = edu;
+
             return View();
         }
         public IActionResult Resume()
@@ -57,6 +66,37 @@ namespace eProject3.Controllers
             HttpContext.Session.Clear();
             return RedirectToAction("Career","Website");
         }
+        [HttpPost]
+        [HttpPost]
+        public IActionResult AddEducation(CandidateEducation edu)
+        {
+            // Get CandidateId from session
+            int? candidateId = HttpContext.Session.GetInt32("CandidateId");
+            if (candidateId == null)
+                return RedirectToAction("Login", "Candidate");
+
+            if (string.IsNullOrWhiteSpace(edu.Degree) || string.IsNullOrWhiteSpace(edu.Institution))
+            {
+                TempData["Error"] = "Degree and Institution are required";
+                return RedirectToAction("Education");
+            }
+
+            edu.CandidateId = candidateId.Value;
+
+            try
+            {
+                medicalDb.tbl_CandidateEducations.Add(edu);
+                medicalDb.SaveChanges();
+                TempData["Success"] = "Education added successfully";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Error saving education: " + ex.Message;
+            }
+
+            return RedirectToAction("Education");
+        }
+
 
     }
 }

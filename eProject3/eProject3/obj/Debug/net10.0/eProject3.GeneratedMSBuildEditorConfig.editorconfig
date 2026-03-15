@@ -19,157 +19,157 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = eProject3
 build_property.RootNamespace = eProject3
-build_property.ProjectDir = C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3\
+build_property.ProjectDir = C:\Users\Dell\Desktop\E-project\eProject3\eProject3\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\amanu\OneDrive\Desktop\E-project\eProject3\eProject3
+build_property.MSBuildProjectDirectory = C:\Users\Dell\Desktop\E-project\eProject3\eProject3
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/Careers.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/Careers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FyZWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/Messages.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/Messages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzc2FnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/Msgview.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/Msgview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXNndmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/Products.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Admin/QuoteUs.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Admin/QuoteUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUXVvdGVVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Candidate/Education.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Candidate/Education.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXEVkdWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Candidate/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Candidate/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Candidate/Personal.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Candidate/Personal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXFBlcnNvbmFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Candidate/Resume.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Candidate/Resume.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuZGlkYXRlXFJlc3VtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Create.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fwc3VsZU1hY2hpbmVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Delete.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fwc3VsZU1hY2hpbmVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Details.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fwc3VsZU1hY2hpbmVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Edit.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fwc3VsZU1hY2hpbmVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/CapsuleMachine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fwc3VsZU1hY2hpbmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Create.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkRmlsbGluZ01hY2hpbmVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Delete.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkRmlsbGluZ01hY2hpbmVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Details.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkRmlsbGluZ01hY2hpbmVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Edit.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkRmlsbGluZ01hY2hpbmVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/LiquidFillingMachine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlxdWlkRmlsbGluZ01hY2hpbmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Shared/Candidate_Layout.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Shared/Candidate_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENhbmRpZGF0ZV9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Shared/Dashboard_Layout.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Shared/Dashboard_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hib2FyZF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Shared/_Layout.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Create.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGV0TWFjaGluZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Delete.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGV0TWFjaGluZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Details.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGV0TWFjaGluZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Edit.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGV0TWFjaGluZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/TabletMachine/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGV0TWFjaGluZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/About.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/Admin.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/Career.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/Career.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxDYXJlZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/Contact.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/Index.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/Products.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/Website/QuoteUs.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/Website/QuoteUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vic2l0ZVxRdW90ZVVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/amanu/OneDrive/Desktop/E-project/eProject3/eProject3/Views/_ViewImports.cshtml]
+[C:/Users/Dell/Desktop/E-project/eProject3/eProject3/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
