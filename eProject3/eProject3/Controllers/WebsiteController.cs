@@ -91,77 +91,71 @@ namespace eProject3.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(Candidate c)
         {
-            // Step 1: Inspect incoming data
-            Console.WriteLine("==== Candidate Data ====");
-            Console.WriteLine($"FirstName: {c.FirstName}");
-            Console.WriteLine($"LastName: {c.LastName}");
-            Console.WriteLine($"Email: {c.Email}");
-            Console.WriteLine($"Password: {c.Password}");
-            Console.WriteLine($"Phone: {c.Phone}");
-
             if (!ModelState.IsValid)
             {
-                foreach (var state in ModelState)
-                {
-                    foreach (var error in state.Value.Errors)
-                    {
-                        Console.WriteLine($"Field: {state.Key}, Error: {error.ErrorMessage}");
-                    }
-                }
+                return View("Career", c);
             }
-            
-            // Step 2: Save to DB
+
             try
             {
                 await medicalDb.tbl_Candidates.AddAsync(c);
                 await medicalDb.SaveChangesAsync();
 
-                Console.WriteLine($"Candidate saved! ID: {c.Id}");
-
+                // Save candidate in session
+                HttpContext.Session.SetString("CandidateEmail", c.Email);
                 HttpContext.Session.SetInt32("CandidateId", c.Id);
 
                 return RedirectToAction("Index", "Candidate");
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Error saving candidate: " + ex.Message);
+                ViewBag.msg = "Registration failed.";
                 return View("Career", c);
             }
         }
 
-        [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(string email, string password)
+        [HttpPost]
+        public IActionResult Login(string email, string password)
         {
-            var user = medicalDb.tbl_Candidates
+            var candidate = medicalDb.tbl_Candidates
                 .FirstOrDefault(x => x.Email == email && x.Password == password);
 
-            if (user != null)
+            if (candidate != null)
             {
-                // Create claims
-                var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, user.Email),
-            new Claim("CandidateId", user.Id.ToString()) // optional
-        };
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                // Sign in user
-                await HttpContext.SignInAsync(
-                    CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(claimsIdentity),
-                    new AuthenticationProperties
-                    {
-                        IsPersistent = true, // optional "remember me"
-                        ExpiresUtc = DateTime.UtcNow.AddHours(2)
-                    });
+                // Store admin info in session
+                HttpContext.Session.SetString("CandidateEmail", candidate.Email);
+                HttpContext.Session.SetInt32("CandidateId", candidate.Id);
 
                 return RedirectToAction("Index", "Candidate");
             }
 
             ViewBag.msg = "Invalid Email or Password";
-            return View("Career");
+            return View("AdminLogin");
         }
+        
+        public IActionResult Admin()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult A_login(string email, string password)
+        {
+            var candidate = medicalDb.tbl_Candidates
+                .FirstOrDefault(x => x.Email == email && x.Password == password);
+
+            if (candidate != null)
+            {
+                // Store admin info in session
+                HttpContext.Session.SetString("CandidateEmail", candidate.Email);
+                HttpContext.Session.SetInt32("CandidateId", candidate.Id);
+
+                return RedirectToAction("Index", "Candidate");
+            }
+
+            ViewBag.msg = "Invalid Email or Password";
+            return View("AdminLogin");
+        }
+
     }
 }

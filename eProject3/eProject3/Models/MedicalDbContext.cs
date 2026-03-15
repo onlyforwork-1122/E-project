@@ -26,5 +26,9 @@ namespace eProject3.Models
          public DbSet<CandidateDetails> tbl_CandidateDetails { get; set; }
          public DbSet<CandidateEducation> tbl_CandidateEducations { get; set; }
          public DbSet<CandidateResume> tbl_CandidateResume { get; set; }
+
+
+
+        public DbSet<Admin> Admins { get; set; }
     }
 }
