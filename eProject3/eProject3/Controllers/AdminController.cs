@@ -15,15 +15,27 @@ namespace eProject3.Controllers
         }
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             return View();
         }
 
         public IActionResult Careers()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             return View();
         }
         public async Task<IActionResult> Messages()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             var msgdata = await medicalDb.tbl_Contacts.ToListAsync();
             return View(msgdata);
         }
@@ -42,15 +54,27 @@ namespace eProject3.Controllers
         }
         public async Task<IActionResult> Msgview(int? id)
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             var msg = await medicalDb.tbl_Contacts.FirstOrDefaultAsync(i => i.Id == id);
             return View(msg);
         }
         public IActionResult Products()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             return View();
         }
         public async Task<IActionResult> QuoteUs()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+                return RedirectToAction("Admin", "Website");
+            }
             var quotedata = await medicalDb.tbl_QuoteUS.ToListAsync();
             return View(quotedata);
         }
@@ -66,6 +90,11 @@ namespace eProject3.Controllers
             }
 
             return Ok();
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Admin", "Website");
         }
     }
 }

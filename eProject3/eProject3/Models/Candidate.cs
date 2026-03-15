@@ -22,6 +22,6 @@ namespace eProject3.Models
 
         public string Phone { get; set; }
 
-        public ICollection<CandidateDetails> CandidateDetails { get; set; }
+        public ICollection<CandidateDetails> CandidateDetails { get; set; } = new List<CandidateDetails>();
     }
 }

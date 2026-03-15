@@ -93,6 +93,15 @@ namespace eProject3.Controllers
         {
             if (!ModelState.IsValid)
             {
+                TempData["msg"] = "fileds";
+
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine(error.ErrorMessage);
+                    }
+                }
                 return View("Career", c);
             }
 
@@ -109,12 +118,12 @@ namespace eProject3.Controllers
             }
             catch
             {
-                ViewBag.msg = "Registration failed.";
+                TempData["msg"] = "Registration failed";
+                Console.WriteLine("reg");
                 return View("Career", c);
             }
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
@@ -131,7 +140,7 @@ namespace eProject3.Controllers
             }
 
             ViewBag.msg = "Invalid Email or Password";
-            return View("AdminLogin");
+            return View("Career");
         }
         
         public IActionResult Admin()
@@ -139,22 +148,29 @@ namespace eProject3.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult A_login(string email, string password)
+        public IActionResult A_login(string A_email, string A_password)
         {
-            var candidate = medicalDb.tbl_Candidates
-                .FirstOrDefault(x => x.Email == email && x.Password == password);
+            Console.WriteLine("Admin login method called");
 
-            if (candidate != null)
+            var admin = medicalDb.Admins
+                .FirstOrDefault(x => x.Email == A_email && x.Password == A_password);
+
+            if (admin != null)
             {
-                // Store admin info in session
-                HttpContext.Session.SetString("CandidateEmail", candidate.Email);
-                HttpContext.Session.SetInt32("CandidateId", candidate.Id);
+                HttpContext.Session.SetString("AdminEmail", admin.Email);
+                HttpContext.Session.SetInt32("AdminId", admin.Id);
 
-                return RedirectToAction("Index", "Candidate");
+                Console.WriteLine("Login Success");
+
+                return RedirectToAction("Index", "Admin");
             }
 
+            Console.WriteLine("Login Failed");
+            Console.WriteLine(A_email);
+            Console.WriteLine(A_password);
+
             ViewBag.msg = "Invalid Email or Password";
-            return View("AdminLogin");
+            return View("Admin");
         }
 
     }
