@@ -1,4 +1,4 @@
-﻿@* @model Enumerable<> *@
+﻿@model eProject3.Models.Candidate
 @{
     ViewData["Title"] = "Personal";
     Layout = "~/Views/Shared/Candidate_Layout.cshtml";
@@ -29,7 +29,9 @@
             <div class="flex gap-16" style="align-items:center;">
                 <div class="user-av-lg">AK</div>
                 <div>
-                    <div style="font-family:var(--font-display);font-size:24px;color:var(--text-primary);">Ayesha Khan</div>
+                    <div style="font-family:var(--font-display);font-size:24px;color:var(--text-primary);">
+                        @Html.DisplayFor(modelItem => modelItem.FirstName)
+                    </div>
                     <div style="font-size:13.5px;color:var(--text-muted);margin-top:4px;">QC Analyst Applicant &nbsp;·&nbsp; Karachi, Sindh, Pakistan</div>
                     <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;">
                         <span class="badge badge-info">B.Pharm Graduate</span>
@@ -60,19 +62,23 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-label">First Name</div>
-                            <div class="info-value">Ayesha</div>
+                            <div class="info-value">
+                                @Html.DisplayFor(modelItem => modelItem.FirstName)
+                            </div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Last Name</div>
-                            <div class="info-value">Khan</div>
+                            <div class="info-value">
+                                @Html.DisplayFor(modelItem => modelItem.LastName)
+                            </div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Date of Birth</div>
-                            <div class="info-value">April 15, 1998</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.DateOfBirth)</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Gender</div>
-                            <div class="info-value">Female</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.Gender)</div>
                         </div>
                     </div>
                 </div>
@@ -87,15 +93,22 @@
                     <div class="info-grid">
                         <div class="info-item" style="grid-column:1/-1; border-right:none;">
                             <div class="info-label">Email Address</div>
-                            <a href="mailto:ayesha.khan@email.com" class="info-value link">ayesha.khan@email.com</a>
+                            <a href="mailto:@Html.DisplayFor(modelItem => modelItem.Email)
+                                " class="info-value link">
+                                @Html.DisplayFor(modelItem => modelItem.Email)
+                            </a>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Phone Number</div>
-                            <div class="info-value">+92 300 1234567</div>
+                            <div class="info-value">
+                                @Html.DisplayFor(modelItem => modelItem.Phone)
+                            </div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Country</div>
-                            <div class="info-value">Pakistan</div>
+                            <div class="info-value">
+                                @Html.DisplayFor(modelItem => modelItem.Country)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,23 +123,23 @@
                     <div class="info-grid">
                         <div class="info-item" style="grid-column:1/-1;border-right:none;">
                             <div class="info-label">Street Address</div>
-                            <div class="info-value">Block 5, Gulshan-e-Iqbal</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.StreetAddress)</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">City</div>
-                            <div class="info-value">Karachi</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.City)</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">State / Province</div>
-                            <div class="info-value">Sindh</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.Province)</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Postal Code</div>
-                            <div class="info-value">74200</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.PostalCode)</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Country</div>
-                            <div class="info-value">Pakistan</div>
+                            <div class="info-value">@Html.DisplayFor(modelItem => modelItem.Country)</div>
                         </div>
                     </div>
                 </div>

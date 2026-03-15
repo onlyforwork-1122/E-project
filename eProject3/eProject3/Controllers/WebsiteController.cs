@@ -32,7 +32,7 @@ namespace eProject3.Controllers
             return View();
         }
 
-        
+
 
         [HttpPost]
         public async Task<IActionResult> Contact(Contact contact)
@@ -142,7 +142,7 @@ namespace eProject3.Controllers
             ViewBag.msg = "Invalid Email or Password";
             return View("Career");
         }
-        
+
         public IActionResult Admin()
         {
             return View();

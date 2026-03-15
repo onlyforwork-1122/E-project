@@ -22,12 +22,18 @@ namespace eProject3.Controllers
         }
         public async Task<IActionResult> Personal()
         {
-            if (HttpContext.Session.GetString("CandidateEmail") == null)
-            {
+            var email = HttpContext.Session.GetString("CandidateEmail");
+
+            if (email == null)
                 return RedirectToAction("Career", "Website");
-            }
-            var personal_data = await medicalDb.tbl_Contacts.ToListAsync();
-            return View(personal_data);
+
+            var candidate = await medicalDb.tbl_Candidates
+                                .FirstOrDefaultAsync(c => c.Email == email);
+
+            if (candidate == null)
+                return RedirectToAction("Career", "Website"); // optional safety check
+
+            return View(candidate);
         }
         public IActionResult Education()
         {

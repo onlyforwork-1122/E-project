@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Admin";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -8,23 +7,24 @@
 
 <div id="admin-login-panel">
     <section class="section" style="max-width:480px;margin:0 auto;">
-      <div class="card">
-        <div style="text-align:center;margin-bottom:2rem;">
-          <div class="logo-mark" style="margin:0 auto 1rem;width:48px;height:48px;font-size:1.1rem;">Rx</div>
-          <h3 style="font-family:var(--font-display);font-size:1.6rem;">Admin Login</h3>
-          <p style="color:var(--text-muted);font-size:0.875rem;margin-top:0.5rem;">Authorised personnel only</p>
-        </div>
-        <form asp-action="A_Login" method="post">
-        <div id="admin-login-error" class="alert alert-error hidden">
-            @if(ViewBag.msg != null){
-                        <h1>✗ Invalid credentials. Access denied.</h1>
-            }
+        <div class="card">
+            <div style="text-align:center;margin-bottom:2rem;">
+                <div class="logo-mark" style="margin:0 auto 1rem;width:48px;height:48px;font-size:1.1rem;">Rx</div>
+                <h3 style="font-family:var(--font-display);font-size:1.6rem;">Admin Login</h3>
+                <p style="color:var(--text-muted);font-size:0.875rem;margin-top:0.5rem;">Authorised personnel only</p>
             </div>
-        <div class="form-group"><label>Admin Email</label><input type="email" name="A_email" id="admin-email" placeholder="admin@xyzpharma.com"/></div>
-        <div class="form-group"><label>Password</label><input type="password" name="A_password" id="admin-pass" placeholder="••••••••"/></div>
-        <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;" onclick="adminLogin()">Login to Admin Portal →</button>
-        <p style="text-align:center;font-size:0.78rem;color:rgba(138,154,176,0.5);margin-top:1.25rem;font-family:var(--font-mono);">Demo: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59491989c9bb58d8c8f859d94879894db969a98">[email&#160;protected]</a> / admin123</p>
-        </form>
-      </div>
+            <form asp-action="A_Login" method="post">
+                <div id="admin-login-error" class="alert alert-error hidden">
+                    @if (ViewBag.msg != null)
+                    {
+                        <h1>✗ Invalid credentials. Access denied.</h1>
+                    }
+                </div>
+                <div class="form-group"><label>Admin Email</label><input type="email" name="A_email" id="admin-email" placeholder="admin@xyzpharma.com" /></div>
+                <div class="form-group"><label>Password</label><input type="password" name="A_password" id="admin-pass" placeholder="••••••••" /></div>
+                <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;" onclick="adminLogin()">Login to Admin Portal →</button>
+                <p style="text-align:center;font-size:0.78rem;color:rgba(138,154,176,0.5);margin-top:1.25rem;font-family:var(--font-mono);">Demo: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59491989c9bb58d8c8f859d94879894db969a98">[email&#160;protected]</a> / admin123</p>
+            </form>
+        </div>
     </section>
-  </div>
+</div>
