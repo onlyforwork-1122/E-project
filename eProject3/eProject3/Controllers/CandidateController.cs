@@ -1,9 +1,11 @@
 ﻿using eProject3.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace eProject3.Controllers
 {
+    [Authorize]
     public class CandidateController : Controller
     {
         private readonly MedicalDbContext medicalDb;
@@ -15,9 +17,10 @@ namespace eProject3.Controllers
         {
             return View();
         }
-        public IActionResult Personal()
+        public async Task<IActionResult> Personal()
         {
-            return View();
+            var personal_data = await medicalDb.tbl_Contacts.ToListAsync();
+            return View(personal_data);
         }
         public IActionResult Education()
         {

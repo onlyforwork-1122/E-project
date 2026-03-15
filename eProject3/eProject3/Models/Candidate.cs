@@ -9,7 +9,9 @@ namespace eProject3.Models
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        [Required]
+        public string LastName { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -17,6 +19,8 @@ namespace eProject3.Models
 
         [Required]
         public string Password { get; set; }
+
+        public string Phone { get; set; }
 
         public ICollection<CandidateDetails> CandidateDetails { get; set; }
     }

@@ -1,4 +1,5 @@
 using eProject3.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,16 +18,24 @@ builder.Services.AddDbContext<MedicalDbContext>(item =>
 builder.Services.AddSession();
 builder.Services.AddDistributedMemoryCache();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Website/Career"; // redirect here if not logged in
+        options.AccessDeniedPath = "/Account/AccessDenied"; // optional
+    });
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
 
 
 // MiddleWares
-
 app.UseStaticFiles(); 
 app.UseRouting();
-app.UseSession();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
@@ -34,5 +43,6 @@ app.MapControllerRoute(
     );
 
 //app.MapGet("/", () => "Hello World!");
+app.UseSession();
 
 app.Run();

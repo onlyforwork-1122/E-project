@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj": {
+    "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj",
         "projectName": "eProject3",
-        "projectPath": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj",
-        "packagesPath": "C:\\Users\\amanu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amanu\\OneDrive\\Desktop\\E-project\\eProject3\\eProject3\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\eProject3.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\amanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
