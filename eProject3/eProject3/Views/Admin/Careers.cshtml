@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<eProject3.Models.Candidate>
+@{
     ViewData["Title"] = "Careers";
     Layout = "~/Views/Shared/Dashboard_Layout.cshtml";
 }
@@ -34,15 +35,29 @@
                             <tr>
                                 <th>#</th>
                                 <th>Applicant</th>
-                                <th>Position</th>
+                                <th>Email</th>
+                                <th>Phone</th>
                                 <th>Education</th>
-                                <th>University</th>
-                                <th>Applied</th>
-                                <th>Status</th>
+                                <th>Institution</th>
+                                <th>Grade/GPA</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody id="careers-tbody"></tbody>
+                        <tbody id="careers-tbody">
+                            @foreach(var applicant in Model )
+                            {
+                                <tr>
+                                    <td>@applicant.Id</td>
+                                    <td>@applicant.FirstName @applicant.LastName</td>
+                                    <td>@applicant.Email</td>
+                                    <td>@applicant.Phone</td>
+                                    <td>@(applicant.Educations.FirstOrDefault()?.Degree ?? "-")</td>
+                                    <td>@(applicant.Educations.FirstOrDefault()?.Institution ?? "-")</td>
+                                    <td>@(applicant.Educations.FirstOrDefault()?.Grade ?? "-")</td>
+                                    <td><a class="btn-sm-icon btn-view" href="mailto:@applicant.Email" title="email"><i class="bi bi-envelope"></i></a></td>
+                                </tr>
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>

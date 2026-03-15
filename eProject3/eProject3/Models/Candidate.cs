@@ -25,6 +25,7 @@ namespace eProject3.Models
         public string Phone { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public string DateOfBirth { get; set; }
 
         [Required]
@@ -48,9 +49,8 @@ namespace eProject3.Models
 
         public string Province{ get; set; }
 
-        public ICollection<CandidateDetails> CandidateDetails { get; set; } = new List<CandidateDetails>();
+        public ICollection<CandidateEducation> Educations { get; set; } = new List<CandidateEducation>();
     }
-
     public enum gender
     {
         Male,
@@ -58,5 +58,4 @@ namespace eProject3.Models
         Other
 
     } 
-
 }

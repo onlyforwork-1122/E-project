@@ -15,12 +15,27 @@ namespace eProject3.Controllers
         }
         public IActionResult Index()
         {
+            var TotalProducts =
+                medicalDb.tbl_CapsuleMachines.Count() +
+                medicalDb.tbl_TabletMachine.Count() +
+                medicalDb.tbl_LiquidFillingMachine.Count(); // add all product tables here
+                var CareerApplicants = medicalDb.tbl_Candidates.Count();
+                var QuotesFeedback = medicalDb.tbl_QuoteUS.Count();
+                var ContactMessages = medicalDb.tbl_Contacts.Count();
+
+            ViewBag.Products = TotalProducts;
+            ViewBag.Career = CareerApplicants;
+            ViewBag.Quotes = QuotesFeedback;
+            ViewBag.Contact = ContactMessages;
             return View();
         }
 
-        public IActionResult Careers()
+        public async Task<IActionResult> Careers()
         {
-            return View();
+            var applicants = medicalDb.tbl_Candidates
+        .Include(c => c.Educations)     
+        .ToList();
+            return View(applicants);
         }
         public async Task<IActionResult> Messages()
         {

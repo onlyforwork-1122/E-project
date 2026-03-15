@@ -149,49 +149,69 @@
 
         <!-- ── EDIT MODE ── -->
         <div id="edit-mode" style="display:none;">
-            <div class="card card-pad fade-in">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
-                    <div style="font-size:16px;font-weight:600;color:var(--text-primary);">Edit Personal Information</div>
-                    <button class="btn btn-ghost btn-sm" onclick="setEditMode(false)">Cancel</button>
-                </div>
+    <form asp-action="UpdatePersonal" method="post">
+        <div class="card card-pad fade-in">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+                <div style="font-size:16px;font-weight:600;color:var(--text-primary);">Edit Personal Information</div>
+                <button type="button" class="btn btn-ghost btn-sm" onclick="setEditMode(false)">Cancel</button>
+            </div>
 
-                <div class="form-section">Basic Info</div>
-                <div class="form-grid">
-                    <div class="field"><label>First name</label><input type="text" value="Ayesha" /></div>
-                    <div class="field"><label>Last name</label><input type="text" value="Khan" /></div>
-                    <div class="field"><label>Date of birth</label><input type="date" value="1998-04-15" /></div>
-                    <div class="field">
-                        <label>Gender</label>
-                        <select><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select>
-                    </div>
+            <div class="form-section">Basic Info</div>
+            <div class="form-grid">
+                <div class="field">
+                    <label>First name</label>
+                    <input type="text" name="FirstName" value="@Model.FirstName" required />
                 </div>
-
-                <div class="form-section">Contact</div>
-                <div class="form-grid">
-                    <div class="field"><label>Email address</label><input type="email" value="ayesha.khan@email.com" /></div>
-                    <div class="field"><label>Phone number</label><input type="tel" value="+92 300 1234567" /></div>
+                <div class="field">
+                    <label>Last name</label>
+                    <input type="text" name="LastName" value="@Model.LastName" required />
                 </div>
-
-                <div class="form-section">Address</div>
-                <div class="form-grid g1">
-                    <div class="field"><label>Street address</label><input type="text" value="Block 5, Gulshan-e-Iqbal" /></div>
+                <div class="field">
+                    <label>Date of birth</label>
+                            <input type="date" asp-for="DateOfBirth" class="form-control" />
                 </div>
-                <div class="form-grid" style="margin-top:18px;">
-                    <div class="field"><label>City</label><input type="text" value="Karachi" /></div>
-                    <div class="field"><label>State / Province</label><input type="text" value="Sindh" /></div>
-                    <div class="field"><label>Postal code</label><input type="text" value="74200" /></div>
-                    <div class="field"><label>Country</label><input type="text" value="Pakistan" /></div>
-                </div>
-
-                <div class="flex gap-10 mt-24">
-                    <button class="btn btn-primary" onclick="savePersonal()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="15" height="15" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                        Save Changes
-                    </button>
-                    <button class="btn btn-outline" onclick="setEditMode(false)">Cancel</button>
+                <div class="field">
+                    <label>Gender</label>
+                            <select name="gender" id="reg-gender" asp-items="Html.GetEnumSelectList<gender>()">
+                                <option value="">Select Gender</option>
+                                    
+                            </select>
                 </div>
             </div>
+
+            <div class="form-section">Contact</div>
+            <div class="form-grid">
+                <div class="field">
+                    <label>Email address</label>
+                    <input type="email" name="Email" value="@Model.Email" required />
+                </div>
+                <div class="field">
+                    <label>Phone number</label>
+                    <input type="tel" name="Phone" value="@Model.Phone" required />
+                </div>
+            </div>
+
+            <div class="form-section">Address</div>
+            <div class="form-grid g1">
+                <div class="field"><label>Street address</label><input type="text" name="StreetAddress" value="@Model.StreetAddress" /></div>
+            </div>
+            <div class="form-grid" style="margin-top:18px;">
+                <div class="field"><label>City</label><input type="text" name="City" value="@Model.City" /></div>
+                <div class="field"><label>State / Province</label><input type="text" name="Province" value="@Model.Province" /></div>
+                <div class="field"><label>Postal code</label><input type="text" name="PostalCode" value="@Model.PostalCode" /></div>
+                <div class="field"><label>Country</label><input type="text" name="Country" value="@Model.Country" /></div>
+            </div>
+
+            <div class="flex gap-10 mt-24">
+                <button type="submit" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="15" height="15" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    Save Changes
+                </button>
+                <button type="button" class="btn btn-outline" onclick="setEditMode(false)">Cancel</button>
+            </div>
         </div>
+    </form>
+</div>
 
     </div>
 </main>

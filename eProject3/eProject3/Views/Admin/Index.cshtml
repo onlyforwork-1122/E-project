@@ -21,8 +21,7 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background:var(--primary-pale);color:var(--primary);"><i class="bi bi-box-seam-fill"></i></div>
                     <div class="stat-info">
-                        <h3 id="stat-products">0</h3><p>Total Products</p>
-                        <div class="trend" style="color:var(--success);"><i class="bi bi-arrow-up-short"></i> 12% this month</div>
+                        <h3 id="stat-products">@ViewBag.Products</h3><p>Total Products</p>
                     </div>
                 </div>
             </div>
@@ -30,8 +29,7 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background:var(--purple-light);color:var(--purple);"><i class="bi bi-people-fill"></i></div>
                     <div class="stat-info">
-                        <h3 id="stat-careers">0</h3><p>Career Applicants</p>
-                        <div class="trend" style="color:var(--success);"><i class="bi bi-arrow-up-short"></i> 5 new today</div>
+                    <h3 id="stat-careers">@ViewBag.Career</h3><p>Career Applicants</p>
                     </div>
                 </div>
             </div>
@@ -39,8 +37,7 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background:var(--accent-light);color:var(--accent);"><i class="bi bi-chat-quote-fill"></i></div>
                     <div class="stat-info">
-                        <h3 id="stat-quotes">0</h3><p>Quotes / Feedback</p>
-                        <div class="trend" style="color:var(--warning);"><i class="bi bi-arrow-right-short"></i> Steady</div>
+                    <h3 id="stat-quotes">@ViewBag.Quotes</h3><p>Quotes / Feedback</p>
                     </div>
                 </div>
             </div>
@@ -48,8 +45,7 @@
                 <div class="stat-card">
                     <div class="stat-icon" style="background:var(--success-light);color:var(--success);"><i class="bi bi-envelope-fill"></i></div>
                     <div class="stat-info">
-                        <h3 id="stat-messages">0</h3><p>Contact Messages</p>
-                        <div class="trend" style="color:var(--success);"><i class="bi bi-arrow-up-short"></i> <span id="unread-count">0</span> unread</div>
+                    <h3 id="stat-messages">@ViewBag.Contact</h3><p>Contact Messages</p>
                     </div>
                 </div>
             </div>

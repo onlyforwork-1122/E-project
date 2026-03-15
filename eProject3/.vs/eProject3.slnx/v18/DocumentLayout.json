@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\views\\admin\\careers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\admin\\careers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\models\\candidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\candidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\models\\candidateeducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\models\\candidateeducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\views\\shared\\candidate_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\shared\\candidate_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\views\\candidate\\personal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\candidate\\personal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\views\\candidate\\education.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\views\\candidate\\education.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|c:\\users\\dell\\desktop\\e-project\\eproject3\\eproject3\\migrations\\20260315181708_asds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60D598B-2946-2F46-77E9-DA3EF2FC700A}|eProject3\\eProject3.csproj|solutionrelative:eproject3\\migrations\\20260315181708_asds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CandidateController.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\CandidateController.cs",
-              "RelativeDocumentMoniker": "eProject3\\Controllers\\CandidateController.cs",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\CandidateController.cs",
-              "RelativeToolTip": "eProject3\\Controllers\\CandidateController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAowGUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T17:36:33.889Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T20:16:30.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Careers.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Admin\\Careers.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Admin\\Careers.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Admin\\Careers.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Admin\\Careers.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T18:22:02.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CandidateEducation.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Models\\CandidateEducation.cs",
+              "RelativeDocumentMoniker": "eProject3\\Models\\CandidateEducation.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Models\\CandidateEducation.cs",
+              "RelativeToolTip": "eProject3\\Models\\CandidateEducation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:08:32.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "eProject3\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "eProject3\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:05:28.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Candidate.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Models\\Candidate.cs",
+              "RelativeDocumentMoniker": "eProject3\\Models\\Candidate.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Models\\Candidate.cs",
+              "RelativeToolTip": "eProject3\\Models\\Candidate.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwDgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:54:45.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Candidate_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Shared\\Candidate_Layout.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T17:58:18.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20260315181708_asds.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Migrations\\20260315181708_asds.cs",
+              "RelativeDocumentMoniker": "eProject3\\Migrations\\20260315181708_asds.cs",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Migrations\\20260315181708_asds.cs",
+              "RelativeToolTip": "eProject3\\Migrations\\20260315181708_asds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T18:17:08.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Personal.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Candidate\\Personal.cshtml",
+              "RelativeDocumentMoniker": "eProject3\\Views\\Candidate\\Personal.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Candidate\\Personal.cshtml",
+              "RelativeToolTip": "eProject3\\Views\\Candidate\\Personal.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAALEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T17:45:01.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Education.cshtml",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Candidate\\Education.cshtml",
               "RelativeDocumentMoniker": "eProject3\\Views\\Candidate\\Education.cshtml",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\E-project\\eProject3\\eProject3\\Views\\Candidate\\Education.cshtml",
               "RelativeToolTip": "eProject3\\Views\\Candidate\\Education.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAowDAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowDEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-15T17:32:14.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T17:32:14.377Z"
             }
           ]
         }

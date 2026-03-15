@@ -97,6 +97,34 @@ namespace eProject3.Controllers
             return RedirectToAction("Education");
         }
 
+        [HttpPost]
+        public IActionResult UpdatePersonal(Candidate model)
+        {
+            int? candidateId = HttpContext.Session.GetInt32("CandidateId");
+            if (candidateId == null)
+                return RedirectToAction("Login");
 
+            var candidate = medicalDb.tbl_Candidates.FirstOrDefault(c => c.Id == candidateId);
+            if (candidate == null)
+                return RedirectToAction("Login");
+
+            // Update fields
+            candidate.FirstName = model.FirstName;
+            candidate.LastName = model.LastName;
+            candidate.DateOfBirth = model.DateOfBirth;
+            candidate.Gender = model.Gender;
+            candidate.Email = model.Email;
+            candidate.Phone = model.Phone;
+            candidate.StreetAddress = model.StreetAddress;
+            candidate.City = model.City;
+            candidate.Province = model.Province;
+            candidate.PostalCode = model.PostalCode;
+            candidate.Country = model.Country;
+
+            medicalDb.SaveChanges();
+
+            TempData["Success"] = "Personal details updated successfully";
+            return RedirectToAction("Personal");
+        }
     }
 }

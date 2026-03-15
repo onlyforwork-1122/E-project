@@ -7,7 +7,9 @@ namespace eProject3.Models
     public class CandidateEducation
     {
         public int Id { get; set; }
+        [ForeignKey("Candidate")]
         public int CandidateId { get; set; }
+        public Candidate Candidate { get; set; }
         public string Degree { get; set; }
         public string Institution { get; set; }
         public int StartYear { get; set; }
